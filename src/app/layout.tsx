@@ -19,9 +19,14 @@ export default function RootLayout({
       <body
         className={`${chathura.variable} ${openSans.variable} ${roboto.variable}`}
       >
-        <Header />
-        {children}
-        <Footer />
+        <div className="App">
+          <Header />
+          <main className="AppBody">
+
+          {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

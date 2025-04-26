@@ -1,8 +1,8 @@
 export default async function AdminListEnrollmentPage() {
   return (
-    <div>
+    <section>
       <h1>Gerenciar contas de matrículas</h1>
       <p>Esta é a página de criação de conta</p>
-    </div>
+    </section>
   );
 }

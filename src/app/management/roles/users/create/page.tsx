@@ -1,8 +1,8 @@
 export default async function AdminCreateUserPage() {
   return (
-    <div>
+    <section>
       <h1>Adicionar usuário</h1>
       <p>Esta é a página de criação de conta do usuário</p>
-    </div>
+    </section>
   );
 }

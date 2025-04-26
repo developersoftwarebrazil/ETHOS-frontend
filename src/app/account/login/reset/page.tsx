@@ -1,8 +1,8 @@
 export default async function ResetPage() {
   return (
-    <div>
+    <section>
       <h1>Redefinir Senha</h1>
       <p>Esta é a página de redefinição de senha de conta</p>
-    </div>
+    </section>
   );
 }

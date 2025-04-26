@@ -1,8 +1,8 @@
 export default async function HomeAdminPage() {
   return (
-    <div>
+    <section>
       <h1>Home Administador </h1>
       <p>Esta é a página de administração</p>
-    </div>
+    </section>
   );
 }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
-import {chathura, openSans, roboto } from "@/functions/fonts";
-
+import { chathura, openSans, roboto } from "@/functions/fonts";
+import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title: "Aplicativo de Gestão ETHOS",
@@ -15,7 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body  className={`${chathura.variable} ${openSans.variable} ${roboto.variable}`}>{children}</body>
+      <body
+        className={`${chathura.variable} ${openSans.variable} ${roboto.variable}`}
+      >
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }

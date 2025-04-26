@@ -1,0 +1,23 @@
+@import '../styles/variables/index.scss';
+.footer {
+  background: $grl01;
+  padding: 3rem 1rem 0 1rem;
+  height: 10rem;
+  text-align: center;
+  color: #764701;
+}
+
+.footer p {
+  margin-top: 1rem;
+}
+.logo {
+  font: $font-1-t-xxl;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1.5;
+  color: $bl11;
+  text-transform: uppercase;
+}
+.footer img {
+  margin: 0 auto;
+}

@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import styles from "@/app/account/login/login.module.scss";
+import styles from "@/components/account/login/login-form.module.scss";
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");

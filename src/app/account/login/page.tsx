@@ -1,8 +1,31 @@
-export default async function LoginPage() { 
+import LoginForm from "@/components/account/login/login-form";
+import styles from "./login.module.scss";
+
+export default async function LoginPage() {
   return (
-    <section>
-      <h1>Login</h1>
-      <p>Esta é a página de login</p>
+    <section className={styles.login}>
+      <div className={styles.left}>
+        <div className={styles.mask}>
+          <h1 className="title">Login</h1>
+          <LoginForm />
+        </div>
+      </div>
+
+      <div className={styles.right}>
+        <div className={styles.presentation}>
+          <h2>ETHOS</h2>
+          <p>CURSOS INTEGRADOS</p>
+          <h3>APRESENTA</h3>
+          <div className={styles.cpac}>
+            <span>C</span>
+            <span>P</span>
+            <span>A</span>
+            <span>C</span>
+          </div>
+          <p>CURSO DE PSICANÁLISE E ANÁLISES CLÍNICA</p>
+          <blockquote>"Velhos universos, novas dimensões"</blockquote>
+        </div>
+      </div>
     </section>
   );
 }

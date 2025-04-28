@@ -21,6 +21,8 @@
   justify-content: right;
   align-items: center;
   padding: .5rem;
+  background: rgba(255, 255, 255, 0.8);
+
 }
 
 .mask {
@@ -58,7 +60,7 @@
   min-width: 70%;
   background: url("/assets/foto-apresentador.png") no-repeat bottom right;
   background-size: contain;
-  opacity: 0.5;
+  opacity: 0.2;
   z-index: 1;
 }
 
@@ -70,7 +72,7 @@
   color: #333;
 
   h2 {
-    font: $font
+  
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 0.2em;

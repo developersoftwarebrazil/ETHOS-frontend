@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import styles from "@/components/account/login/login-form.module.scss";
+import InputField from "@/components/forms/inputs/InputFields";
 
 export default function LoginForm() {
   const [username, setUsername] = useState("");
@@ -12,22 +13,23 @@ export default function LoginForm() {
   }
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <label id={username}>Usuário</label>
-      <input
-        id={username}
+      <InputField
+        id="username"
+        label="Usuário"
         type="text"
-        placeholder="Usuário"
         value={username}
         onChange={(e) => setUsername(e.target.value)}
+        placeholder="Usuário"
         required
       />
 
-      <label id={email}>Email</label>
-      <input
+      <InputField
+        id="email"
+        label="Email"
         type="email"
-        placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        placeholder="Email"
         required
       />
 

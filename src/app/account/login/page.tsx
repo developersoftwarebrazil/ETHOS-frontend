@@ -18,6 +18,7 @@ export default async function LoginPage() {
 
         {/* Lado direito: Apresentação */}
         <div className={styles.right}>
+          
         <div className={styles.presenterImage}></div>
           <div className={styles.presentation}>
             <h2>ETHOS</h2>
@@ -31,7 +32,7 @@ export default async function LoginPage() {
             </div>
             <p>CURSO DE PSICANÁLISE E ANÁLISES CLÍNICA</p>
             <blockquote>"Velhos universos, novas dimensões"</blockquote>
-           
+          
           </div>
         </div>
       </div>

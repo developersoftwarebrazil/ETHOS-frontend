@@ -1,0 +1,17 @@
+@import "@/styles/variables/index.scss";
+
+label {
+  @include font-token(font-2-m);
+}
+input {
+  @include font-token(font-2-s);
+}
+input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid $bl10;
+  background: $grl01;
+  color: $bl10;
+  width: 100%;
+  box-sizing: border-box;
+}

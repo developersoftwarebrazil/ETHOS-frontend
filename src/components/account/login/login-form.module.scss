@@ -1,28 +1,40 @@
+@import "@/styles/variables/index.scss";
 .form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-
- 
-
+  gap: $space-020;
+  overflow: hidden;
+  button{
+    @include font-token(font-1-l-b);
+  }
   button {
-    padding: 0.75rem;
-    background: #0f2b57;
-    color: white;
+    display: inline-block;
+    padding: $space-008 $space-016;
+    background: $bl05;
+    color: $grl01;
     border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    text-transform: uppercase;
+    border-radius: .5rem;
     cursor: pointer;
   }
 
+
   .links {
+    @include font-token(font-2-l);
     font-size: 0.8rem;
     a {
-      color: #e9f9fb;
+      color: $grl01;
       display: block;
       margin-top: 0.5rem;
       text-decoration: none;
     }
   }
+  .enter{
+    margin: $space-024 0 0 0;
+    width: 35%;
+  }
+  .register{
+    background: #F66763;
+
+  }
+ 
 }

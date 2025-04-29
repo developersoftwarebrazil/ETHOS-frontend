@@ -13,31 +13,35 @@ export default function LoginForm() {
   }
   return (
     <form onSubmit={handleSubmit} className={styles.form}>
-      <InputField
-        id="username"
-        label="Usuário"
-        type="text"
-        value={username}
-        onChange={(e) => setUsername(e.target.value)}
-        placeholder="Usuário"
-        required
-      />
+      <div className={styles.inputs}>
+        <InputField
+          id="username"
+          label="Usuário"
+          type="text"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Usuário"
+          required
+        />
 
-      <InputField
-        id="email"
-        label="Email"
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Email"
-        required
-      />
+        <InputField
+          id="email"
+          label="Email"
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+          required
+        />
 
-      <button type="submit">Entrar</button>
-
+        <button className={styles.enter} type="submit">
+          Entrar
+        </button>
+      </div>
       <div className={styles.links}>
-        <a href="#">Esqueceu a senha?</a>
-        <a href="#">Ainda não possui uma conta? Cadastre-se no site.</a>
+        <a href="#">Esqueceu a senha?</a>{" "}
+        <a href="#">Ainda não possui uma conta?</a>
+        <button className={styles.register}>Cadastre-se no site</button>
       </div>
     </form>
   );

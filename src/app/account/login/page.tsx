@@ -21,9 +21,9 @@ export default async function LoginPage() {
           <div className={styles.backgroundImage}></div>
           <div className={styles.presenterImage}></div>
           <div className={styles.presentation}>
-            <h2>ETHOS</h2>
-            <p>CURSOS INTEGRADOS</p>
-            <h3>APRESENTA</h3>
+            <h2>Ethos</h2>
+            <p>cursos integrados</p>
+            <h3>Apresenta</h3>
             <div className={styles.cpac}>
               <span>C</span>
               <span>P</span>
@@ -31,7 +31,12 @@ export default async function LoginPage() {
               <span>C</span>
             </div>
             <p>CURSO DE PSICANÁLISE E ANÁLISES CLÍNICA</p>
-            <blockquote>"Velhos universos, novas dimensões"</blockquote>
+            <div className={styles.blockquote}>
+              <blockquote>
+                <span>Velhos universos,</span>
+                <span>novas dimensões</span>
+              </blockquote>
+            </div>
           </div>
           <div className={styles.overlay}></div> {/* Overlay vem por último! */}
         </div>

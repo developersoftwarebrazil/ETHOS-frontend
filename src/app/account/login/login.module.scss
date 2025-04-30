@@ -1,14 +1,14 @@
 @import "@/styles/variables/index.scss";
 
-.container-login {
-  margin: 0 auto;
-  max-width: 1200px;
-  background: rgba(255, 255, 255, 0.8);
-}
+// .container-login {
+//   // margin: 0 auto;
+//   // max-width: 1200px;
+//   // background: rgba(255, 255, 255, 0.8);
+// }
 
 .login {
   position: relative;
-  min-height: 110vh;
+  // min-height: 110vh;
   background: url("/assets/foto-estante-livros.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
@@ -18,174 +18,33 @@
 .content {
   display: flex;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .left {
   display: flex;
   flex: 1.5;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
   padding: $space-020 0 $space-020 $space-032;
   background: rgba(255, 255, 255, 0.8);
-}
 
-.mask {
-  z-index: 6;
-  width: 100%;
-  padding: 3rem 2rem 3rem 2rem;
-  background-color: $bl07;
-  border-radius: 20% 0 30% 0;
-  color: $grl02;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.right {
-  flex: 2;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background: none;
-  overflow: hidden;
-}
-
-.presenterImage {
-  position: absolute;
-  padding: 0;
-  margin: 0;
-  right: -150px;
-  bottom: 0;
-  top: auto;
-  height: 80%;
-  width: auto;
-  min-width: 70%;
-  background: url("/assets/foto-apresentador.png") no-repeat bottom right;
-  background-size: contain;
-  opacity: 1;
-  z-index: 2;
-}
-
-.presentation {
-  top: $space-032;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 5;
-  max-width: 30rem;
-  color: #333;
-
-  h2 {
-    @include font-token(font-0-xxxl);
-    text-align: center;
-    text-transform: uppercase;
-    color: $bl11;
-  }
-
-  p {
-    @include font-token(font-2-xl);
-    color: $bl08;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  p,
-  h3,
-  blockquote {
-    margin: $space-008 0;
-  }
-
-  h3 {
-    @include font-token(font-0-xxl);
-    text-align: center;
-  }
-
-  .cpac {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; // Centraliza qualquer texto dentro da .cpac, fora dos spans
-    gap: 1rem;
-
-    span {
-      @include font-token(font-0-xxl);
-      background-color: $bl06;
-      color: $grl01;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      // Sobrescrevendo valores problemáticos do token
-      line-height: 1; // Remove espaçamento vertical exagerado
-      letter-spacing: 0; // Centraliza melhor a letra visualmente
-    }
-  }
-  .blockquote {
-    display: flex;
-    justify-content: center;
-    blockquote {
-      display: block;
-      @include font-token(font-2-m-i);
-      text-align: center;
-      margin: $space-040 0;
-      position: relative;
-
-      span {
-        display: block;
-        line-height: 1.5;
-
-        &:last-child {
-          text-indent: 16px; // recuo da segunda linha
-        }
-
-        &::before,
-        &::after {
-          content: "";
-          position: absolute;
-          width: 1.5rem;
-          height: 1.5rem;
-          background-size: contain;
-          background-repeat: no-repeat;
-        }
-
-        &::before {
-          top: -0.5rem;
-          left: -1.5rem;
-          background-image: url("/assets/aspas-left.svg");
-        }
-
-        &::after {
-          bottom: -0.5rem;
-          right: -2rem;
-          background-image: url("/assets/aspas-right.svg");
-        }
-      }
-    }
-  }
-}
-// Deixa o fundo branco transparente cobrindo o lado direito
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.7);
-  z-index: 3;
-}
-
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-  }
-
-  .left,
-  .right {
+  @media (max-width: 768px) {
     justify-content: center;
     padding: 1rem;
   }
-
-  .right {
-    display: none;
-  }
+}
+.mask {
+  z-index: 6;
+  width: 100%;
+  padding: 3rem 2rem;
+  background-color: $bl07;
+  border-radius: 20% 0 30% 0;
+  color: $grl02;
+  display: flex;
+  flex-direction: column;
 }

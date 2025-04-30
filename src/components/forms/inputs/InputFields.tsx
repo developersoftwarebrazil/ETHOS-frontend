@@ -5,33 +5,36 @@ import React from "react";
 
 interface InputFieldProps {
   id: string;
+  name: string;
   label: string;
-  type: string;
-  value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder: string;
-  required?: boolean;
+  type: string;
+  // value: string;
+  // onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  // required?: boolean;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
   id,
+  name,
   label,
-  type,
-  value,
-  onChange,
   placeholder,
-  required = false,
+  type,
+  // value,
+  // onChange,
+  // required = false,
 }) => {
   return (
     <div>
       <label htmlFor={id}>{label}</label>
       <input
         id={id}
+        name={name}
         type={type}
         placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        required={required}
+        // value={value}
+        // onChange={onChange}
+        // required={required}
       />
     </div>
   );

@@ -4,20 +4,7 @@
   flex-direction: column;
   gap: $space-020;
   overflow: hidden;
-  button{
-    @include font-token(font-1-l-b);
-  }
-  button {
-    display: inline-block;
-    padding: $space-008 $space-016;
-    background: $bl05;
-    color: $grl01;
-    border: none;
-    border-radius: .5rem;
-    cursor: pointer;
-  }
-
-
+ 
   .links {
     @include font-token(font-2-l);
     font-size: 0.8rem;

@@ -1,7 +1,10 @@
 @import "@/styles/variables/index.scss";
 
 .button {
+  display: inline-block;
+  max-width: 20%;
   @include font-token(font-2-s);
+  text-transform: uppercase;
   cursor: pointer;
   border: none;
   border-radius: 0.4rem;

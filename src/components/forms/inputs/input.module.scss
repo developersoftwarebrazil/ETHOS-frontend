@@ -1,0 +1,44 @@
+@import "@/styles/variables/index.scss";
+
+.wrapper {
+  margin-bottom: 1rem;
+}
+
+.input {
+  display: block;
+  @include font-token(font-2-s);
+  width: 100%;
+  color: $bl10;
+  padding: 0.8rem;
+  border: 1px solid $bl10;
+  border-radius: 0.4rem;
+  background: $grl01;
+  transition: 0.2s;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+.input:focus,
+.input:hover {
+  outline: none;
+  border-color: #fb1;
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
+}
+
+.label {
+  @include font-token(font-2-m);
+  display: block;
+  font-size: 1rem;
+  line-height: 1;
+  padding-bottom: 0.5rem;
+  margin-bottom: .5rem;
+
+}
+
+.error {
+  color: #f31;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+

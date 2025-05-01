@@ -1,11 +1,12 @@
 "use client";
 
 import styles from "@/components/account/login/login-form.module.scss";
-import InputField from "@/components/forms/inputs/InputFields";
+
 import Button from "@/components/forms/buttons/button";
 import Login from "@/actions/login";
 
 import { useFormState, useFormStatus } from "react-dom";
+import Input from "@/components/forms/inputs/input";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -30,26 +31,21 @@ export default function LoginForm() {
   return (
     <>
       <form action={action} className={styles.form}>
-
         <div className={styles.inputs}>
-          <InputField
-            id="username"
-            name="username"
-            type="text"
-            placeholder="Usuário"
+          <Input
             label="Usuário"
-           
+            name="username"
+            placeholder="usuário"
+            type="text"
+          />
+          <Input
+            label="Senha"
+            name="password"
+            placeholder="senha"
+            type="password"
           />
 
-          <InputField
-            id="passwoerd"
-            name="password"
-            label="Senha"
-            type="password"
-            placeholder="Senha"
-           
-          />
-          <p>{state.error}</p>
+          <p className={styles.error}>{state.error}</p>
         </div>
         <FormButton />
         <div className={styles.links}>

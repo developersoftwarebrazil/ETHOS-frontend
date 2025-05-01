@@ -1,5 +1,6 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+/* eslint-disable-next-line @typescript-eslint/ban-ts-comment -- necessário para uso temporário enquanto ajustamos tipos */
 // @ts-nocheck
+
 export const API_URL = 'https://dogsapi.origamid.dev/json';
 
 export function TOKEN_POST() {

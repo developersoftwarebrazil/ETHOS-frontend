@@ -20,9 +20,11 @@
     width: 35%;
   }
   .register{
-    background: #F66763;
-    padding: $space-008 $space-016;
+    background: #e41226;
+    padding: $space-016 $space-024;
     color: $grl01;
+    border: transparent;
+    border-radius: .5rem;
+    text-transform: uppercase;
   }
- 
 }

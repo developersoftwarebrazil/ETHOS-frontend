@@ -4,8 +4,8 @@ interface PageProps {
   };
 }
 
-export default async function ProfileUserPage({ params }: PageProps) {
-  const {user} = params;
+export default function ProfileUserPage({ params }: PageProps) {
+  const { user } = params;
   
   return (
     <section>

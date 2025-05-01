@@ -1,12 +1,13 @@
 "use client";
 
 import styles from "@/components/account/login/login-form.module.scss";
-
 import Button from "@/components/forms/buttons/button";
 import Login from "@/actions/login";
 
 import { useFormState, useFormStatus } from "react-dom";
 import Input from "@/components/forms/inputs/input";
+import ErrorMessage from "@/components/helpers/error-messager";
+import React from "react";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -28,6 +29,10 @@ export default function LoginForm() {
     data: null,
   });
 
+  React.useEffect(()=>{
+    if(state.ok) window.location.href='/account';
+  },[state.ok]);
+  
   return (
     <>
       <form action={action} className={styles.form}>
@@ -45,7 +50,7 @@ export default function LoginForm() {
             type="password"
           />
 
-          <p className={styles.error}>{state.error}</p>
+          <ErrorMessage error={state.error} />
         </div>
         <FormButton />
         <div className={styles.links}>

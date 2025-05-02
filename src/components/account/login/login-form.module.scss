@@ -4,27 +4,72 @@
   flex-direction: column;
   gap: $space-020;
   overflow: hidden;
+  padding: $space-016;
  
   .links {
     @include font-token(font-2-l);
-    font-size: 0.8rem;
     a {
       color: $grl01;
       display: block;
       margin-top: 0.5rem;
-      text-decoration: none;
     }
+    .lost {
+      width: fit-content;
+      display: block;
+      // color: #666;
+      padding: 0.5rem 0;
+      line-height: 1;
+      overflow: hidden;
+    }
+    
+    .lost::after {
+      display: block;
+      content: '';
+      height: 2px;
+      margin: $space-004 0;
+      width: 98%;
+      background: currentColor;
+      
+    }
+    
   }
-  .enter{
-    margin: $space-024 0 0 0;
-    width: 35%;
-  }
-  .register{
+
+
+  .register_button{
     background: #e41226;
+    width: fit-content;
     padding: $space-016 $space-024;
     color: $grl01;
-    border: transparent;
+    border: solid 4px transparent;
     border-radius: .5rem;
     text-transform: uppercase;
   }
+}
+
+
+
+
+.register {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.register p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  font-family: var(--type-second);
+  line-height: 1;
+  font-size: 2rem;
+}
+
+.subtitle::after {
+  content: '';
+  display: block;
+  background: #ddd;
+  height: 0.5rem;
+  width: 3rem;
+  border-radius: 0.2rem;
 }

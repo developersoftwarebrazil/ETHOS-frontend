@@ -81,11 +81,11 @@ img {
 
 button,
 input {
+  @include font-token(font-2-s);
   display: block;
-  font-size: 1rem;
-  font-family: var(--type-first);
-  color: $bl07;
+  color: $bl10;
 }
+
 
 a {
   text-decoration: none;
@@ -153,17 +153,15 @@ a {
 }
 
 .button {
-  font-size: 1rem;
-  font-family: var(--type-first);
   cursor: pointer;
   border: none;
   border-radius: 0.4rem;
   background: #fb1;
-  color: #764701;
-  min-width: 8rem;
+  // min-width: 3rem;
   padding: 0.8rem 1.2rem;
   box-sizing: border-box;
   transition: 0.1s;
+  width: fit-content; // ← Isso permite que ele só ocupe o espaço do conteúdo
 }
 
 .button:hover,

@@ -1,28 +1,51 @@
-@import "@/styles/variables/index.scss";
+// @import "@/styles/variables/index.scss";
 
-.button {
-  display: inline-block;
-  max-width: 20%;
-  @include font-token(font-2-s);
-  text-transform: uppercase;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.4rem;
-  background: #fb1;
-  color: #764701;
-  min-width: 8rem;
-  padding: 0.8rem 1.2rem;
-  box-sizing: border-box;
-  transition: 0.1s;
-}
+// .button {
+//   display: inline-block;
+//   max-width: 20%;
+//   @include font-token(font-2-s);
+//   text-transform: uppercase;
+//   cursor: pointer;
+//   border: none;
+//   border-radius: 0.4rem;
+//   background: #fb1;
+//   color: #764701;
+//   min-width: 8rem;
+//   padding: 0.8rem 1.2rem;
+//   box-sizing: border-box;
+//   transition: 0.1s;
+// }
 
-.button:hover,
-.button:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
-}
+// .button:hover,
+// .button:focus {
+//   outline: none;
+//   box-shadow: 0 0 0 3px #fea, 0 0 0 4px #fb1;
+// }
 
-.button:disabled {
-  opacity: 0.5;
-  cursor: wait;
-}
+// .button:disabled {
+//   opacity: 0.5;
+//   cursor: wait;
+// }
+
+
+// .button {
+//   padding: 0.75rem 1.5rem;
+//   font-size: 1rem;
+//   border: none;
+//   border-radius: 8px;
+//   background-color: red;
+//   color: white;
+//   cursor: pointer;
+//   width: fit-content; // ← Isso permite que ele só ocupe o espaço do conteúdo
+
+//   // Para personalizar via props ou classe adicional
+//   &.small {
+//     padding: 0.5rem 1rem;
+//     font-size: 0.875rem;
+//   }
+
+//   &.large {
+//     padding: 1rem 2rem;
+//     font-size: 1.125rem;
+//   }
+// }

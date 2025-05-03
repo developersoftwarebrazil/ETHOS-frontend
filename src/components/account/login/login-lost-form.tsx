@@ -3,63 +3,58 @@
 import styles from "@/components/account/login/login-form.module.scss";
 import Button from "@/components/forms/buttons/button";
 
-
 import { useFormState, useFormStatus } from "react-dom";
 import Input from "@/components/forms/inputs/input";
 import ErrorMessage from "@/components/helpers/error-messager";
 import React from "react";
-import userPost from "@/actions/user-post";
+import passwordLost from "@/actions/password-lost";
 
 function FormButton() {
   const { pending } = useFormStatus();
   return (
     <>
       {pending ? (
-        <Button disabled={pending}>Cadastrando...</Button>
+        <Button disabled={pending}>Enviando...</Button>
       ) : (
-        <Button disabled={pending}>Cadastrar</Button>
+        <Button disabled={pending}>Enviar email</Button>
       )}
     </>
   );
 }
 
-export default function LoginCreateForm() {
-  const [state, action] = useFormState(userPost, {
+// export const dynamic = 'force-dynic';
+
+export default function LoginLostForm() {
+  const [state, action] = useFormState(passwordLost, {
     ok: false,
     error: "",
     data: null,
   });
 
+  const [url, setUrl] = React.useState("");
   React.useEffect(() => {
-    if (state.ok) window.location.href = "/account";
-  }, [state.ok]);
+    setUrl(window.location.href.replace("lost", "reset"));
+  }, []);
 
   return (
     <>
       <form action={action} className={styles.form}>
         <div className={styles.inputs}>
+          <Input label="Email / Usuário" name="login" type="text" />
           <Input
-            label="Usuário"
-            name="username"
-            placeholder="usuário"
-            type="text"
-          />
-          <Input
-            label="Email"
-            name="email"
-            placeholder="email"
-            type="email"
-          />
-          <Input
-            label="Senha"
-            name="password"
-            placeholder="senha"
-            type="password"
+            label=''
+            type="hidden"
+            name="url"
+            value={url}
           />
 
           <ErrorMessage error={state.error} />
+          {state.ok ? (
+            <p style={{ color: "#4c1" }}>Email enviado.</p>
+          ) : (
+            <FormButton />
+          )}
         </div>
-        <FormButton />
       </form>
     </>
   );

@@ -1,6 +1,6 @@
-import styles from "./login-presentation.module.scss";
+import styles from "./login-presentation-form.module.scss";
 
-export default async function LoginPresentation() {
+export default async function LoginPresentationForm() {
   return (
     <>
       <section className={styles.right}>

@@ -1,3 +1,9 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Perdeu ou esqueceu a sua senha | ETHOS",
+  description: "Recupere a sua senha da conta do site ETHOS.",
+};
 export default async function LostPage() {
   return (
     <section>

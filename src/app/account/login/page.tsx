@@ -1,6 +1,12 @@
 import LoginForm from "@/components/account/login/login-form";
 import styles from "./login.module.scss";
-import LoginPresentation from "@/components/account/login/login-presentation";
+import LoginPresentation from "@/components/account/login/login-presentation-form";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Login | ETHOS",
+  description: "Logue na sua conta do site ETHOS.",
+};
 
 export default async function LoginPage() {
   return (

@@ -10,13 +10,16 @@ export const metadata: Metadata = {
 };
 
 type ResetSearchParams = {
-  seachParams: {
+  searchParams: {
     key: string;
     login: string;
   };
 };
-export default async function ResetPage({ searchParams }: ResetSearchParams) {
-  console.log(searchParams);
+
+
+export default async function ResetPage({
+  searchParams,
+}: ResetSearchParams)  {
   return (
     <section className={styles.login}>
       {/* Fundo branco translúcido */}
@@ -27,8 +30,8 @@ export default async function ResetPage({ searchParams }: ResetSearchParams) {
           <div className={styles.mask}>
             <h1 className="title">Recuperar Senha</h1>
             <LoginResetForm
-              keyToken={searchParams.key}
-              login={searchParams.login}
+             keyToken={searchParams.key}
+             login={searchParams.login}
             />
           </div>
           <div className={styles.overlay} />

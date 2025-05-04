@@ -24,22 +24,27 @@ function FormButton() {
 
 // export const dynamic = 'force-dynic';
 
-export default function LoginResetForm({keyToken, login}:{keyToken: string, login: string}) {
+export default function LoginResetForm({
+  keyToken,
+  login,
+}: {
+  login: string;
+  keyToken: string;
+}) {
   const [state, action] = useFormState(passwordReset, {
     ok: false,
     error: "",
     data: null,
   });
 
-
   return (
     <>
       <form action={action} className={styles.form}>
         <div className={styles.inputs}>
           <Input label="Resetar Senha" name="password" type="password" />
-          <input type="hidden" name="login" value={login}/>
-          <input type="hidden" name="key" value={keyToken}/>
-        
+          <input type="hidden" name="login" value={login} />
+          <input type="hidden" name="key" value={keyToken} />
+
           <ErrorMessage error={state.error} />
 
           <FormButton />

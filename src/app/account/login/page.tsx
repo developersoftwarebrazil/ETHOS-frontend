@@ -1,6 +1,6 @@
 import LoginForm from "@/components/account/login/login-form";
 import styles from "./login.module.scss";
-import LoginPresentation from "@/components/account/login/login-presentation-form";
+import LoginPresentation from "@/components/account/login/presentations/login-presentation-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

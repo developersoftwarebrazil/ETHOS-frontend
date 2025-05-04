@@ -1,18 +1,16 @@
 import { Metadata } from "next";
 
 import styles from "@/app/account/login/login.module.scss";
-import LoginResetForm from "@/components/account/login/login-reset-form";
-import LoginPresentationForm from "@/components/account/login/login-presentation-form";
+import LoginResetForm from "@/components/account/login/reset/login-reset-form";
+import LoginPresentationForm from "@/components/account/login/presentations/login-presentation-form";
+
 
 export const metadata: Metadata = {
   title: "Resetar a sua senha | ETHOS",
   description: "Reset a senha da sua conta do site ETHOS.",
 };
 
-
-
-
-export default async function ResetPage()  {
+export default async function ResetPage() {
   return (
     <section className={styles.login}>
       {/* Fundo branco translúcido */}

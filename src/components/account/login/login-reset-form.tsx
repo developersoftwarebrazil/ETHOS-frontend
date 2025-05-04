@@ -7,7 +7,7 @@ import { useFormState, useFormStatus } from "react-dom";
 import Input from "@/components/forms/inputs/input";
 import ErrorMessage from "@/components/helpers/error-messager";
 import React from "react";
-import passwordReset from "@/actions/password-lost";
+import passwordReset from "@/actions/password-reset";
 
 function FormButton() {
   const { pending } = useFormStatus();
@@ -22,15 +22,8 @@ function FormButton() {
   );
 }
 
-// export const dynamic = 'force-dynic';
 
-export default function LoginResetForm({
-  keyToken,
-  login,
-}: {
-  login: string;
-  keyToken: string;
-}) {
+export default function LoginResetForm() {
   const [state, action] = useFormState(passwordReset, {
     ok: false,
     error: "",
@@ -38,18 +31,15 @@ export default function LoginResetForm({
   });
 
   return (
-    <>
-      <form action={action} className={styles.form}>
-        <div className={styles.inputs}>
-          <Input label="Resetar Senha" name="password" type="password" />
-          <input type="hidden" name="login" value={login} />
-          <input type="hidden" name="key" value={keyToken} />
+    <form action={action} className={styles.form}>
+      <div className={styles.inputs}>
+        <Input label="Nova Senha" name="password" type="password" />
+      
 
-          <ErrorMessage error={state.error} />
+        <ErrorMessage error={state.error} />
 
-          <FormButton />
-        </div>
-      </form>
-    </>
+        <FormButton />
+      </div>
+    </form>
   );
 }

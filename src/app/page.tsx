@@ -1,8 +1,10 @@
+import LoginPresentationForm from "@/components/account/login/login-presentation-form";
+
 export default function Home() {
   return (
     <div>
       <main>
-        <h1 className="title">Home</h1>
+        <LoginPresentationForm/>
       </main>
     </div>
   );

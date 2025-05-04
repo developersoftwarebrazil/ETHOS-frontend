@@ -9,17 +9,10 @@ export const metadata: Metadata = {
   description: "Reset a senha da sua conta do site ETHOS.",
 };
 
-type ResetSearchParams = {
-  searchParams: {
-    key: string;
-    login: string;
-  };
-};
 
 
-export default async function ResetPage({
-  searchParams,
-}: ResetSearchParams)  {
+
+export default async function ResetPage()  {
   return (
     <section className={styles.login}>
       {/* Fundo branco translúcido */}
@@ -29,10 +22,7 @@ export default async function ResetPage({
         <div className={styles.left}>
           <div className={styles.mask}>
             <h1 className="title">Recuperar Senha</h1>
-            <LoginResetForm
-             keyToken={searchParams.key}
-             login={searchParams.login}
-            />
+            <LoginResetForm />
           </div>
           <div className={styles.overlay} />
         </div>

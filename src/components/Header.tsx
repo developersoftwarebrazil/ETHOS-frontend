@@ -1,14 +1,24 @@
-import  styles  from "./Header.module.scss";
+import userGet from "@/actions/user-get";
+import styles from "./Header.module.scss";
 import Link from "next/link";
 
-export default function Header() {
-  const user = false; // Simulating user authentication status
+export default async function Header() {
+  const { data } = await userGet();
   return (
     <header className={styles.header}>
-      <nav className={`${styles.nav} container`}>	
-        <Link className={styles.logo} href='/' >Ethos</Link>
-      {user ? <Link className={styles.login} href="/account">exemplo@user.com</Link>:
-      <Link className={styles.login} href="/account/login">Login / Criar</Link>}
+      <nav className={`${styles.nav} container`}>
+        <Link className={styles.logo} href="/">
+          Ethos
+        </Link>
+        {data ? (
+          <Link className={styles.login} href="/account">
+           { data.username}
+          </Link>
+        ) : (
+          <Link className={styles.login} href="/account/login">
+            Login / Criar
+          </Link>
+        )}
       </nav>
     </header>
   );

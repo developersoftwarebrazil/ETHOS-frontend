@@ -25,5 +25,5 @@ export default async function passwordReset(
   } catch (error: unknown) {
     return apiError(error);
   }
-  redirect('/login');
+  redirect('/account/login');
 }

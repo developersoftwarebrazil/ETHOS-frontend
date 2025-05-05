@@ -22,8 +22,13 @@ function FormButton() {
   );
 }
 
-
-export default function LoginResetForm() {
+export default function LoginResetForm({
+  keyToken,
+  login,
+}: {
+  login: string;
+  keyToken: string;
+}) {
   const [state, action] = useFormState(passwordReset, {
     ok: false,
     error: "",
@@ -34,7 +39,8 @@ export default function LoginResetForm() {
     <form action={action} className={styles.form}>
       <div className={styles.inputs}>
         <Input label="Nova Senha" name="password" type="password" />
-      
+        <input type="hidden" name="login" value={login} />
+        <input type="hidden" name="key" value={keyToken} />
 
         <ErrorMessage error={state.error} />
 

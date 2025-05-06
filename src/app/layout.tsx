@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 import { chathura, openSans, roboto } from "@/functions/fonts";
-import Header from "@/components/Header";
+import Header from "@/components/headers/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -22,7 +22,6 @@ export default function RootLayout({
         <div className="App">
           <Header />
           <main className="AppBody">
-
           {children}
           </main>
           <Footer />

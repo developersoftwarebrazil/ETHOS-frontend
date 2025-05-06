@@ -1,12 +1,13 @@
-@import "../../styles/variables/index.scss" ;
+@import "../../styles/variables/index.scss";
 
 .header {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
-  position: fixed;
+  background: $grl01;
+  color: $bl10;
   width: 100%;
+  position: fixed;
   z-index: 100;
-  background: white;
-  top: 0px;
+  top: 0;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .nav {
@@ -18,26 +19,50 @@
 
 .logo {
   font: $font-1-t-xxl;
-  text-decoration: none;
-  font-weight: 500;
-  line-height: 1.5;
   color: $bl11;
+  text-decoration: none;
+  // font-weight: 500;
   text-transform: uppercase;
 }
 
 .login {
-  color: #333;
+  color: $bl09;
   display: flex;
   align-items: center;
 }
 
 .login::after {
   content: "";
-  display: inline-block;
   width: 14px;
   height: 17px;
   background: url("/assets/usuario.svg") no-repeat center center;
   margin-left: 0.5rem;
   position: relative;
   top: -1px;
+}
+
+.logged {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .welcome {
+    font-size: 0.875rem;
+  }
+
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+
+    li a {
+      color: $bl09;
+      text-decoration: none;
+      font-weight: 500;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

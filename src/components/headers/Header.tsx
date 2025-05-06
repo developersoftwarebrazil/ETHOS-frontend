@@ -10,10 +10,27 @@ export default async function Header() {
         <Link className={styles.logo} href="/">
           Ethos
         </Link>
+
         {data ? (
-          <Link className={styles.login} href="/account">
-            <Link href={"/account/profile"}>{data.username}</Link>
-          </Link>
+          <div className={styles.logged}>
+            <span className={styles.spanWelcome}>
+              Bem vindo{" "}
+              <span className={styles.spanName}>
+                <Link href={"/account/profile"}>{data.username}</Link>
+              </span>{" "}
+            </span>
+            <ul className={styles.menu}>
+              <li>
+                <Link href="/admin">VER SITE</Link>
+              </li>
+              <li>
+                <Link href="/admin/settings">ALTERAR SENHA</Link>
+              </li>
+              <li>
+                <Link href="/account/logout">SAIR</Link>
+              </li>
+            </ul>
+          </div>
         ) : (
           <Link className={styles.login} href="/account/login">
             Login / Criar

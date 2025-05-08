@@ -24,7 +24,7 @@ export default async function Header() {
                 <Link href="/admin">VER SITE</Link>
               </li>
               <li>
-                <Link href="/admin/settings">ALTERAR SENHA</Link>
+                <Link href="/account/login/reset">ALTERAR SENHA</Link>
               </li>
               <li>
                 <Link href="/account/logout">SAIR</Link>

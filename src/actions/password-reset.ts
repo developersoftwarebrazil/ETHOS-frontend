@@ -8,8 +8,8 @@ export default async function passwordReset(
   state: { ok: boolean; error: string },
   formData: FormData
 ) {
-  const login = formData.get("login") as string | null;
-  const key = formData.get("key") as string | null;
+  const login = formData.get("login") as string | null |undefined;
+  const key = formData.get("key") as string | null |undefined;
   const password = formData.get("password") as string | null;
 
   try {

@@ -9,13 +9,14 @@ export const metadata: Metadata = {
   description: "Reset a senha da sua conta do site ETHOS.",
 };
 type SearchParamsReset = {
-  searchParams: {
+  searchParams: Promise<{
     key: string;
     login: string;
-  };
+  }>;
 };
 
-export default async function ResetPage({ searchParams }: SearchParamsReset) {
+export default async function ResetPage(props: SearchParamsReset) {
+  const searchParams = await props.searchParams;
   console.log(searchParams);
   return (
     <section className={styles.login}>

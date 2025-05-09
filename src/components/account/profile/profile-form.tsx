@@ -1,3 +1,5 @@
-export default function ProfileUserDashboardForm(){
-  return <div>Home</div>
+export default function ProfileUserDashboardForm() {
+  return <div>
+    Home
+    </div>;
 }

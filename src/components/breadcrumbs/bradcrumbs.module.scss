@@ -1,0 +1,59 @@
+@import "../../styles/variables/index.scss";
+.breadcrumbs {
+  font: $font-2-xs;
+  width: 100%;
+  background-color: $bl08; // azul escuro do layout
+  padding: 1rem 2rem;
+  color: $grl02;
+  overflow: hidden;
+}
+
+.breadcrumbsContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: .05rem 1rem;
+}
+
+.breadcrumbsItems {
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.breadcrumbsContent li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+
+  span {
+    color: $grl02;
+  }
+
+  a {
+    color: $grl02;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &:last-child {
+    span {
+      font-weight: bold;
+      color: #fb1;
+    }
+
+    a {
+      pointer-events: none;
+      text-decoration: none;
+    }
+  }
+}

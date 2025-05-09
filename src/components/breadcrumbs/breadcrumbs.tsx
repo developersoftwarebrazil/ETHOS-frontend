@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import styles from "./bradcrumbs.module.scss";
 import Link from "next/link";
+import breadcrumbLabelTranslate from "@/utils/breadcrumbTranslations";
 
 export default function Breadcrumbs() {
   const pathname = usePathname();
@@ -19,7 +20,7 @@ export default function Breadcrumbs() {
         {pathnameSegmants.map((segments, index) => {
           const isLast = index === pathnameSegmants.length - 1;
           const href = buildHref(index);
-          const label = decodeURIComponent(segments);
+          const label = breadcrumbLabelTranslate[segments] || decodeURIComponent(segments);
 
           return (
             <li key={href}>

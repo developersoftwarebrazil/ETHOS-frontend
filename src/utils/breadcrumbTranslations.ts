@@ -1,0 +1,28 @@
+const breadcrumbLabelTranslate: Record<string, string> = {
+  account: "Minha conta",
+  classroom: "Aula",
+  course: "Curso",
+  courses: "Cursos",
+  create: "Criar",
+  dashboard: "Painel",
+  enrollment: "Matrícula",
+  history: "Histórico",
+  login: "Conectar-se",
+  logout: "Sair",
+  lost: "Perdido",
+  management: "Gerenciamento",
+  profile: "Perfil",
+  remove: "Deletar",
+  reset: "Resetar",
+  roles: "Regras",
+  settings: "Configurações",
+  students: "Alunos",
+  tag: "Etiqueta",
+  tags: "Etiquetas",
+  user: "Usuário",
+  users: "Usuários",
+  video: "Vídeo",
+  videos: "Vídeos",
+};
+
+export default breadcrumbLabelTranslate;

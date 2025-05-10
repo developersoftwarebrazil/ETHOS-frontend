@@ -1,13 +1,12 @@
-import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
+import LoginPresentationForm from "@/components/account/login/presentations/login-presentation-form";
 import Sidebar from "@/components/menus/sidebars/sidebar";
 
 export default function Home() {
   return (
     <div>
-      <Breadcrumbs />
       <main>
         <Sidebar />
-        {/* <LoginPresentationForm /> */}
+        <LoginPresentationForm />
       </main>
     </div>
   );

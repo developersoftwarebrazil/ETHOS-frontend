@@ -3,6 +3,7 @@ import "./globals.scss";
 import { chathura, openSans, roboto } from "@/functions/fonts";
 import Header from "@/components/headers/Header";
 import Footer from "@/components/Footer";
+import BreadcrumbsWrapper from "@/components/breadcrumbs/BreadcrumbsWrapper";
 
 export const metadata: Metadata = {
   title: "Aplicativo de Gestão ETHOS",
@@ -19,7 +20,10 @@ export default function RootLayout({
       >
         <div className="App">
           <Header />
-          <main className="AppBody">{children}</main>
+          <main className="AppBody">
+            <BreadcrumbsWrapper />
+            {children}
+          </main>
           <Footer />
         </div>
       </body>

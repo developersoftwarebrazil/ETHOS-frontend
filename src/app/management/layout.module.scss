@@ -1,0 +1,11 @@
+.layoutWrapper {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  padding: 1rem;
+  transition: margin-left 0.3s ease;
+}

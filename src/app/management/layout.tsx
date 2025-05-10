@@ -1,18 +1,34 @@
 "use client";
+import styles from "./layout.module.scss";
 
-import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
 import Sidebar from "@/components/menus/sidebars/sidebar";
+import { SidebarProvider, useSidebar } from "@/contexts/sidebar/sidebarContext";
 import { usePathname } from "next/navigation";
+import React from "react";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+function LayoutContent({ children }: { children: React.ReactNode }) {
+  const { collapsed } = useSidebar();
   const pathname = usePathname();
 
   const showBreadcrumbs = !pathname.startsWith("/account/login");
 
   return (
-    <>
-      {showBreadcrumbs && <Breadcrumbs /> && <Sidebar />}
-      {children}
-    </>
+    <div className={styles.layoutWrapper}>
+      <Sidebar />
+      <main
+        className={styles.mainContent}
+        style={{ marginLeft: collapsed ? "80px" : "260px" }} // ajuste conforme o colapso
+      >
+        {showBreadcrumbs}
+        {children}
+      </main>
+    </div>
+  );
+}
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <SidebarProvider>
+      <LayoutContent>{children}</LayoutContent>
+    </SidebarProvider>
   );
 }

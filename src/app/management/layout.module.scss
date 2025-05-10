@@ -1,3 +1,5 @@
+@import "../../styles/variables/index.scss" ;
+
 .layoutWrapper {
   display: flex;
   height: 100vh;
@@ -8,4 +10,11 @@
   flex: 1;
   padding: 1rem;
   transition: margin-left 0.3s ease;
+}
+.toggleButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 1rem;
+  color: $grl02;
 }

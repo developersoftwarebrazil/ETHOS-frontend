@@ -3,8 +3,9 @@
 "use client";
 
 import Link from "next/link";
-import { Plus, Pencil } from "lucide-react";
+import { Plus, Pencil, ChevronRight, ChevronLeft } from "lucide-react";
 import styles from "./sidebar.module.scss";
+import { useSidebar } from "@/contexts/sidebar/sidebarContext";
 
 const menuSections = [
   {
@@ -33,8 +34,15 @@ const menuSections = [
 ];
 
 export default function Sidebar() {
+  const{ collapsed, toggleCollapse} = useSidebar()
   return (
-    <aside className={styles.sidebar}>
+    <aside
+      className={styles.sidebar}
+      style={{ width: collapsed ? "80px" : "260px", transition: "width 0.3s" }}
+    >
+      <button onClick={toggleCollapse} className={styles.toggleButton}>
+        {collapsed ? <ChevronRight /> : <ChevronLeft />}
+      </button>
       {menuSections.map((section) => (
         <div key={section.title} className={styles.section}>
           <h4 className={styles.sectionTitle}>{section.title.toUpperCase()}</h4>

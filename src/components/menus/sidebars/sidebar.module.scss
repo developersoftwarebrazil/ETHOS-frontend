@@ -1,0 +1,79 @@
+@import "../../../styles/variables/index.scss";
+
+.sidebar {
+  position: relative;
+  border-end-end-radius: .5rem;
+  border-top-right-radius: .5rem;
+  top: 3rem;
+  left: 0;
+  min-width: max-content;
+  max-width: 360px;
+  background-color: $bl07;
+  color: $grl02;
+  font: $font-2-s;
+  overflow-y: auto;
+}
+
+.section {
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  display: flex;
+  text-align: center;
+  align-content: center;
+  font: $font-2-s;
+  color: #fb1;
+  padding: 1rem;
+  background: $bl08;
+}
+
+.linkList {
+  list-style: none;
+  background: $grl02;
+}
+
+.linkItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  transition: background 0.2s;
+  border: .004rem solid #fb1;
+}
+
+.link {
+  color: $bl11;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    color: $bl09;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-transform: lowercase;
+
+    &:hover {
+      color: $gr02;
+      text-decoration: underline;
+    }
+
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}
+

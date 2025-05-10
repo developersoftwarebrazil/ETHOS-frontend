@@ -40,9 +40,11 @@
   width: 100%;
   padding: 3rem;
   background-color: $bl07;
+
   border-radius: 20% 0 30% 0;
   color: $grl02;
   display: flex;
   flex-direction: column;
-  gap:0.5rem;
+  gap: 0.5rem;
+  border: 0.05rem solid #fb1;
 }

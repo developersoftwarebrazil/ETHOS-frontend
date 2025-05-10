@@ -17,17 +17,17 @@ const menuSections = [
   {
     title: "Área de Gerenciamento do Vídeo",
     items: [
-      { label: "Etiquetas", path: "/management/tags" },
-      { label: "Vídeos", path: "/management/videos" },
+      { label: "Etiquetas", path: "/management/videos/tags" },
+      { label: "Vídeos", path: "/management/videos/video" },
     ],
   },
   {
     title: "Área de Gerenciamento do Curso",
     items: [
-      { label: "Alunos", path: "/management/students" },
-      { label: "Cursos", path: "/management/courses" },
-      { label: "Matrículas", path: "/management/enrollments" },
-      { label: "Turmas", path: "/management/classes" },
+      { label: "Alunos", path: "/management/courses/students" },
+      { label: "Cursos", path: "/management/courses/course" },
+      { label: "Matrículas", path: "/management/courses/enrollment" },
+      { label: "Turmas", path: "/management/courses/classroom" },
     ],
   },
 ];

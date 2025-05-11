@@ -6,9 +6,12 @@ interface SearchBarProps {
   onSearch: (value: string) => void;
 }
 
-export default function SearchBar({ placeholder = "Buscar...", onSearch }: SearchBarProps) {
+export default function SearchBar({
+  placeholder = "Buscar...",
+  onSearch,
+}: SearchBarProps) {
   return (
-    <div className={styles.searchBar}>
+    <div className={styles.searchbar}>
       <Search className={styles.icon} />
       <input
         type="text"
@@ -16,6 +19,9 @@ export default function SearchBar({ placeholder = "Buscar...", onSearch }: Searc
         placeholder={placeholder}
         onChange={(e) => onSearch(e.target.value)}
       />
+      <div className={styles.button}>
+        <p>buscar</p>
+      </div>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 @import "../../../styles/variables/index.scss";
 
 .sidebar {
+  @include font-token(font-2-s);
   position: relative;
   border-end-end-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -8,9 +9,9 @@
   left: 0;
   min-width: max-content;
   max-width: 360px;
-  background-color: $bl07;
+  background-color: $grl01;
   color: $grl02;
-  font: $font-2-s;
+
   overflow-y: auto;
 }
 
@@ -71,8 +72,8 @@
     }
 
     svg {
-      width: 16px;
-      height: 16px;
+      width: 1rem;
+      height: 1rem;
     }
   }
 }
@@ -85,13 +86,13 @@
 
 .toggleButton {
   position: absolute;
-  top: .5rem;
-  right: .0001rem;
-  background: $bl06;
-  border: 1px solid $bl08;
+  top: 1rem;
+  right: 0.3rem;
+  background: $bl01;
+  border: 1px solid #fb1;
   border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,11 +103,10 @@
 .toggleCollapsedButton {
   position: absolute;
   top: 4rem;
-  left:0;
-  background: $bl06;
-  border: 1px solid $bl08;
+  left: 0;
+  background: $bl02;
+  border: 1px solid #fb1;
   border-radius: 50%;
-
   width: 2rem;
   height: 2rem;
   display: flex;

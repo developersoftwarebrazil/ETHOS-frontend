@@ -8,9 +8,11 @@ interface FomrBodyProps {
 
 export default function FormBody({ title, children }: FomrBodyProps) {
   return (
-    <section className={styles.formBody}>
+    <>
       <h1 className={styles.title}>{title}</h1>
-      <div className={styles.content}>{children}</div>
-    </section>
+      <section className={styles.formBody}>
+        <div className={styles.content}>{children}</div>
+      </section>
+    </>
   );
 }

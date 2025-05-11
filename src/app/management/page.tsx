@@ -1,10 +1,10 @@
-'use client'
+"use client";
 import SearchBar from "@/components/forms/searchbars/form-searchbar";
 import FormTable from "@/components/forms/tables/form-table";
 import FormBody from "@/components/forms/body/form-body";
 import { useState } from "react";
 
-export default  function HomeAdminPage() {
+export default function HomeAdminPage() {
   const [search, setSearch] = useState("");
 
   const data = [

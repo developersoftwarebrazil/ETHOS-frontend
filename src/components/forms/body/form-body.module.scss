@@ -1,24 +1,27 @@
 @import "../../../styles/variables/index.scss";
 
 .formBody {
-  background: $grl01;
-  padding: 2rem;
-  border-radius: 8px;
   flex: 1;
-  margin-left: 1rem;
-  margin-top: 3rem;
+  padding: 1rem;
+  margin: 2rem;
+  background: $grl01;
+  border: 0.0025rem solid #fb1;
+  border-radius: 0.5rem;
   height: calc(100vh - 6rem); // considerando header e padding
   overflow-y: auto;
 }
 
 .title {
-  font: $font-2-l;
+  @include font-token(font-1-xl);
+  font-weight: 700;
+  padding: 0 0.4rem;
+  margin: 2rem;
+  color: $bl09;
   margin-bottom: 2rem;
-  color: $bl11;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }

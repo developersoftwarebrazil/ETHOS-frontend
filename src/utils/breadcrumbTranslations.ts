@@ -14,6 +14,7 @@ const breadcrumbLabelTranslate: Record<string, string> = {
   profile: "Perfil",
   remove: "Deletar",
   reset: "Resetar",
+  role: "Regra",
   roles: "Regras",
   settings: "Configurações",
   students: "Alunos",

@@ -16,15 +16,15 @@ export default async function Header() {
             <span className={styles.spanWelcome}>
               Bem vindo{" "}
               <span className={styles.spanName}>
-                <Link href={"/account/profile"}>{data.username}</Link>
+                <Link href={"/management/roles/users"}>{data.username}</Link>
               </span>{" "}
             </span>
             <ul className={styles.menu}>
               <li>
-                <Link href="/admin">VER SITE</Link>
+                <Link href="/">VER SITE</Link>
               </li>
               <li>
-                <Link href="/account/login/reset">ALTERAR SENHA</Link>
+                <Link href="/management/roles/users/edit">ALTERAR SENHA</Link>
               </li>
               <li>
                 <Link href="/account/logout">SAIR</Link>

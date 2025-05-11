@@ -16,8 +16,7 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
     <div className={styles.layoutWrapper}>
       <Sidebar />
       <main
-        className={styles.mainContent}
-        style={{ marginLeft: collapsed ? "80px" : "260px" }} // ajuste conforme o colapso
+        className={`${styles.mainContent} ${collapsed ? styles.expanded : ""}`} // ajuste conforme o colapso
       >
         {showBreadcrumbs}
         {children}

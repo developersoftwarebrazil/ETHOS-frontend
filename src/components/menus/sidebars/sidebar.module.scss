@@ -2,8 +2,8 @@
 
 .sidebar {
   position: relative;
-  border-end-end-radius: .5rem;
-  border-top-right-radius: .5rem;
+  border-end-end-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   top: 3rem;
   left: 0;
   min-width: max-content;
@@ -39,7 +39,7 @@
   align-items: center;
   padding: 0.25rem 0.5rem;
   transition: background 0.2s;
-  border: .004rem solid #fb1;
+  border: 0.004rem solid #fb1;
 }
 
 .link {
@@ -76,4 +76,42 @@
     }
   }
 }
+.collapsed {
+  width: 0 !important;
+  overflow: hidden;
+  padding: 0;
+  border: none;
+}
 
+.toggleButton {
+  position: absolute;
+  top: .5rem;
+  right: .0001rem;
+  background: $bl06;
+  border: 1px solid $bl08;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.toggleCollapsedButton {
+  position: absolute;
+  top: 4rem;
+  left:0;
+  background: $bl06;
+  border: 1px solid $bl08;
+  border-radius: 50%;
+
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  z-index: 10;
+}

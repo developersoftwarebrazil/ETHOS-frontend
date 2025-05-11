@@ -1,9 +1,10 @@
-@import "../../styles/variables/index.scss" ;
+@import "../../styles/variables/index.scss";
 
 .layoutWrapper {
   display: flex;
   height: 100vh;
   overflow: hidden;
+  position: relative; // <-- necessário para o botão se posicionar corretamente
 }
 
 .mainContent {
@@ -17,4 +18,7 @@
   cursor: pointer;
   margin: 1rem;
   color: $grl02;
+}
+.expanded {
+  margin-left: 0 !important;
 }

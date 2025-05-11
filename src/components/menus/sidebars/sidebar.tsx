@@ -34,47 +34,64 @@ const menuSections = [
 ];
 
 export default function Sidebar() {
-  const{ collapsed, toggleCollapse} = useSidebar()
+  const { collapsed, toggleCollapse } = useSidebar();
   return (
-    <aside
-      className={styles.sidebar}
-      style={{ width: collapsed ? "80px" : "260px", transition: "width 0.3s" }}
-    >
-      <button onClick={toggleCollapse} className={styles.toggleButton}>
-        {collapsed ? <ChevronRight /> : <ChevronLeft />}
-      </button>
-      {menuSections.map((section) => (
-        <div key={section.title} className={styles.section}>
-          <h4 className={styles.sectionTitle}>{section.title.toUpperCase()}</h4>
-          <ul className={styles.linkList}>
-            {section.items.map((item) => (
-              <li key={item.label} className={styles.linkItem}>
-                <Link href={item.path} className={styles.link}>
-                  {item.label}
-                </Link>
-                <div className={styles.actions}>
-                  <Link
-                    href={`${item.path}/create`}
-                    className={styles.actionLink}
-                    title="adicionar"
-                  >
-                    <Plus size={16} />
-                    <span>adicionar</span>
-                  </Link>
-                  <Link
-                    href={`${item.path}/edit`}
-                    className={styles.actionLink}
-                    title="editar"
-                  >
-                    <Pencil size={16} />
-                    <span>editar</span>
-                  </Link>
-                </div>
-              </li>
+    <>
+      <aside
+        className={`${styles.sidebar} ${collapsed ? styles.collapsed : ""}`}
+      >
+        {!collapsed && (
+          <>
+            <button onClick={toggleCollapse} className={styles.toggleButton}>
+              <ChevronLeft />
+            </button>
+            {menuSections.map((section) => (
+              <div key={section.title} className={styles.section}>
+                <h4 className={styles.sectionTitle}>
+                  {section.title.toUpperCase()}
+                </h4>
+                <ul className={styles.linkList}>
+                  {section.items.map((item) => (
+                    <li key={item.label} className={styles.linkItem}>
+                      <Link href={item.path} className={styles.link}>
+                        {item.label}
+                      </Link>
+                      <div className={styles.actions}>
+                        <Link
+                          href={`${item.path}/create`}
+                          className={styles.actionLink}
+                          title="adicionar"
+                        >
+                          <Plus size={16} />
+                          <span>adicionar</span>
+                        </Link>
+                        <Link
+                          href={`${item.path}/edit`}
+                          className={styles.actionLink}
+                          title="editar"
+                        >
+                          <Pencil size={16} />
+                          <span>editar</span>
+                        </Link>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </ul>
-        </div>
-      ))}
-    </aside>
+          </>
+        )}
+      </aside>
+
+      {collapsed && (
+        <button
+          onClick={toggleCollapse}
+          className={styles.toggleCollapsedButton}
+          aria-label="Expand sidebar"
+        >
+          <ChevronRight />
+        </button>
+      )}
+    </>
   );
 }

@@ -1,0 +1,24 @@
+@import "../../styles/variables/index.scss";
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: $grl02;
+
+  th, td {
+    padding: 0.75rem;
+    border: 1px solid $bl08;
+    text-align: left;
+    font: $font-2-s;
+    color: $bl11;
+  }
+
+  thead {
+    background-color: $bl08;
+    color: #fb1;
+  }
+
+  tbody tr:hover {
+    background-color: $gr02;
+  }
+}

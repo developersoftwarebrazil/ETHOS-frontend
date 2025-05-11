@@ -1,0 +1,25 @@
+@import "../../styles/variables/index.scss";
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  background-color: $bl07;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  color: $grl02;
+  width: 100%;
+  max-width: 400px;
+}
+
+.icon {
+  margin-right: 0.5rem;
+}
+
+.input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: $grl02;
+  font: $font-2-s;
+  width: 100%;
+}

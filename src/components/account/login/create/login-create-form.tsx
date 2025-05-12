@@ -1,14 +1,16 @@
 "use client";
 
-import styles from "@/components/account/login/login-form.module.scss";
+import userPost from "@/actions/user-post";
+
+import styles from "@/app/account/login/styles/login-form.module.scss"
+
 import Button from "@/components/forms/buttons/button";
 
-
-import { useFormState, useFormStatus } from "react-dom";
 import Input from "@/components/forms/inputs/input";
 import ErrorMessage from "@/components/helpers/error-messager";
+
+import { useFormState, useFormStatus } from "react-dom";
 import React from "react";
-import userPost from "@/actions/user-post";
 
 function FormButton() {
   const { pending } = useFormStatus();

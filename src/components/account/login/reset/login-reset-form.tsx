@@ -1,13 +1,14 @@
 "use client";
+import passwordReset from "@/actions/password-reset";
 
-import styles from "@/components/account/login/login-form.module.scss";
+import styles from "@/app/account/login/styles/login-form.module.scss";
+
 import Button from "@/components/forms/buttons/button";
-
-import { useFormState, useFormStatus } from "react-dom";
 import Input from "@/components/forms/inputs/input";
 import ErrorMessage from "@/components/helpers/error-messager";
+
+import { useFormState, useFormStatus } from "react-dom";
 import React from "react";
-import passwordReset from "@/actions/password-reset";
 
 function FormButton() {
   const { pending } = useFormStatus();

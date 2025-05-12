@@ -1,12 +1,14 @@
 "use client";
 
-import styles from "@/components/account/login/login-form.module.scss";
-import Button from "@/components/forms/buttons/button";
+import styles from "@/app/account/login/styles/login-form.module.scss"
+
 import Login from "@/actions/login";
 
-import { useFormState, useFormStatus } from "react-dom";
+import Button from "@/components/forms/buttons/button";
 import Input from "@/components/forms/inputs/input";
 import ErrorMessage from "@/components/helpers/error-messager";
+
+import { useFormState, useFormStatus } from "react-dom";
 import React from "react";
 import Link from "next/link";
 

@@ -1,7 +1,7 @@
 "use client";
 
+import Sidebar from "@/app/management/components/menus/sidebars/sidebar";
 import { usePathname } from "next/navigation";
-import Sidebar from "../menus/sidebars/sidebar";
 
 
 export default function LayoutWithSidebar({

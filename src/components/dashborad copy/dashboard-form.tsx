@@ -1,5 +1,6 @@
+import Sidebar from "@/app/management/components/menus/sidebars/sidebar";
 import Breadcrumbs from "@/components/breadcrumbs/breadcrumbs";
-import Sidebar from "../menus/sidebars/sidebar";
+// import Sidebar from "../menus/sidebars/sidebar";
 
 export default function DashboardForm({
   children,

@@ -1,11 +1,12 @@
-// src/components/dashboard/Sidebar.tsx
 
 "use client";
 
 import Link from "next/link";
 import { Plus, Pencil, ChevronRight, ChevronLeft } from "lucide-react";
-import styles from "./sidebar.module.scss";
+
+import styles from "../../../styles/sidebar.module.scss";
 import { useSidebar } from "@/contexts/sidebar/sidebarContext";
+
 
 const menuSections = [
   {

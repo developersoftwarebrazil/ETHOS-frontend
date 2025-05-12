@@ -1,4 +1,4 @@
-import ProfileUserDashboardForm from "@/components/account/profile/profile-form";
+import ProfileUserDashboardForm from "@/app/account/profile/components/profile/profile-form";
 
 export default async function UserProfile() {
   return (

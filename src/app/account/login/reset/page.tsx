@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import styles from "@/app/account/login/styles/login.module.scss";
 
-import LoginResetForm from "@/components/account/login/reset/login-reset-form";
+import LoginResetForm from "@/app/account/login/components/reset/login-reset-form";
 import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
 
 export const metadata: Metadata = {

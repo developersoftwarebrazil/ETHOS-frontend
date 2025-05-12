@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import styles from "@/app/account/login/styles/login.module.scss";
 
-import LoginCreate from "@/components/account/login/create/login-create-form";
+import LoginCreate from "@/app/account/login/components/create/login-create-form";
 import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
 
 export const metadata: Metadata = {

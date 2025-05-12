@@ -1,5 +1,5 @@
 "use client";
-import passwordReset from "@/actions/password-reset";
+import passwordReset from "@/actions/auth/password-reset";
 
 import styles from "@/app/account/login/styles/login-form.module.scss";
 

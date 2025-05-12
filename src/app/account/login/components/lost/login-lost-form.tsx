@@ -1,5 +1,5 @@
 "use client";
-import passwordLost from "@/actions/password-lost";
+import passwordLost from "@/actions/auth/password-lost";
 
 import styles from "@/app/account/login/styles/login-form.module.scss";
 

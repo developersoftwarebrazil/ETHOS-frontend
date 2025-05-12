@@ -2,7 +2,7 @@
 
 import { USER_POST } from "@/functions/api";
 import apiError from "@/functions/api-error";
-import login from "./login";
+import login from "../auth/login";
 
 /**
  * Realiza o cadastro do usuário e login automático.

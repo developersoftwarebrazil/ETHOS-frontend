@@ -1,8 +1,8 @@
 "use client";
 
-import userPost from "@/actions/user-post";
+import userPost from "@/actions/users/user-post";
 
-import styles from "@/app/account/login/styles/login-form.module.scss"
+import styles from "@/app/account/login/styles/login-form.module.scss";
 
 import Button from "@/components/forms/buttons/button";
 
@@ -46,12 +46,7 @@ export default function LoginCreateForm() {
             placeholder="usuário"
             type="text"
           />
-          <Input
-            label="Email"
-            name="email"
-            placeholder="email"
-            type="email"
-          />
+          <Input label="Email" name="email" placeholder="email" type="email" />
           <Input
             label="Senha"
             name="password"

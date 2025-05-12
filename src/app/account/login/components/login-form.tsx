@@ -1,8 +1,8 @@
 "use client";
 
-import styles from "@/app/account/login/styles/login-form.module.scss"
+import styles from "@/app/account/login/styles/login-form.module.scss";
 
-import Login from "@/actions/login";
+import Login from "@/actions/auth/login";
 
 import Button from "@/components/forms/buttons/button";
 import Input from "@/components/forms/inputs/input";
@@ -63,12 +63,11 @@ export default function LoginForm() {
 
           <div className={styles.register}>
             <h2 className={styles.subtitle}>Cadastre-se</h2>
-              <p>Ainda não possui uma conta?  Cadastre-se no site.</p>  
+            <p>Ainda não possui uma conta? Cadastre-se no site.</p>
           </div>
-          <Link className={styles.register_button} href='/account/login/create'>
+          <Link className={styles.register_button} href="/account/login/create">
             Cadastre-se no site
           </Link>
-      
         </div>
       </form>
     </>

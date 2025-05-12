@@ -1,4 +1,4 @@
-import userGet from "@/actions/user-get";
+import userGet from "@/actions/auth/register";
 import styles from "./Header.module.scss";
 import Link from "next/link";
 

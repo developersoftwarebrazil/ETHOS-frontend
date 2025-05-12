@@ -1,5 +1,7 @@
 import { Metadata } from "next";
-import styles from "@/app/account/login/login.module.scss";
+
+import styles from "@/app/account/login/styles/login.module.scss";
+
 import LoginPresentation from "@/components/account/login/presentations/login-presentation-form";
 import LoginCreate from "@/components/account/login/create/login-create-form";
 

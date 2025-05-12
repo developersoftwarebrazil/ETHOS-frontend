@@ -1,4 +1,4 @@
-import styles from "./login.module.scss";
+import styles from "./styles/login.module.scss";
 
 export default async function LoginLayout({ children,}:{children: React.ReactNode;}) {
   return (

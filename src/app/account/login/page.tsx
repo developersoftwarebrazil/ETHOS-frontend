@@ -1,8 +1,8 @@
 import styles from "./styles/login.module.scss";
 
 import LoginForm from "@/app/account/login/components/login-form";
+import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
 
-import LoginPresentation from "@/components/account/login/presentations/login-presentation-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default async function LoginPage() {
           <div className={styles.overlay} />
         </div>
         {/* Lado direito: Apresentação */}
-        <LoginPresentation />
+        <BackgroundPresentationForm />
         <div className={styles.overlay}></div> {/* Overlay vem por último! */}
       </div>
     </section>

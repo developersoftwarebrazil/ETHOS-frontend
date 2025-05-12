@@ -1,6 +1,6 @@
-import styles from "./login-presentation-form.module.scss";
+import styles from "@/components/styles/background-presentation-form.module.scss";
 
-export default async function LoginPresentationForm() {
+export default async function BackgroundPresentationForm() {
   return (
     <>
       <section className={styles.right}>

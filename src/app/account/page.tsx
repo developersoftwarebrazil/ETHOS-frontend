@@ -1,9 +1,10 @@
-import LoginPresentationForm from "@/components/account/login/presentations/login-presentation-form";
+import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
+
 
 export default async function AccountPage() {
   return (
     <section>
-      <LoginPresentationForm />
+      <BackgroundPresentationForm />
     </section>
   );
 }

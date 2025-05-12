@@ -3,7 +3,8 @@ import { Metadata } from "next";
 import styles from "@/app/account/login/styles/login.module.scss";
 
 import LoginLostForm from "@/components/account/login/lost/login-lost-form";
-import LoginPresentationForm from "@/components/account/login/presentations/login-presentation-form";
+import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
+
 
 export const metadata: Metadata = {
   title: "Perdeu ou esqueceu a sua senha | ETHOS",
@@ -24,7 +25,7 @@ export default async function LostPage() {
           <div className={styles.overlay} />
         </div>
         {/* Lado direito: Apresentação */}
-        <LoginPresentationForm />
+        <BackgroundPresentationForm />
         <div className={styles.overlay}></div> {/* Overlay vem por último! */}
       </div>
     </section>

@@ -1,10 +1,10 @@
-import LoginPresentationForm from "@/components/account/login/presentations/login-presentation-form";
+import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
 
 export default function Home() {
   return (
     <div>
       <main>
-        <LoginPresentationForm />
+        <BackgroundPresentationForm />
       </main>
     </div>
   );

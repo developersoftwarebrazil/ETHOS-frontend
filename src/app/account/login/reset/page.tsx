@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import styles from "@/app/account/login/styles/login.module.scss";
 
 import LoginResetForm from "@/components/account/login/reset/login-reset-form";
-import LoginPresentationForm from "@/components/account/login/presentations/login-presentation-form";
+import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
 
 export const metadata: Metadata = {
   title: "Resetar a sua senha | ETHOS",
@@ -36,7 +36,7 @@ export default async function ResetPage(props: SearchParamsReset) {
           <div className={styles.overlay} />
         </div>
         {/* Lado direito: Apresentação */}
-        <LoginPresentationForm />
+        <BackgroundPresentationForm />
         <div className={styles.overlay}></div> {/* Overlay vem por último! */}
       </div>
     </section>

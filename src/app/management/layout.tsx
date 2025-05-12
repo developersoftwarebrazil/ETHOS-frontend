@@ -1,5 +1,5 @@
 "use client";
-import styles from "./layout.module.scss";
+import styles from "./styles/layout.module.scss";
 
 import { useSidebar } from "@/contexts/sidebar/sidebarContext";
 import { usePathname } from "next/navigation";

@@ -1,8 +1,7 @@
 "use client";
 import styles from "./layout.module.scss";
 
-import Sidebar from "@/components/menus/sidebars/sidebar";
-import { SidebarProvider, useSidebar } from "@/contexts/sidebar/sidebarContext";
+import { useSidebar } from "@/contexts/sidebar/sidebarContext";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -14,7 +13,6 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
 
   return (
     <div className={styles.layoutWrapper}>
-      <Sidebar />
       <main
         className={`${styles.mainContent} ${collapsed ? styles.expanded : ""}`} // ajuste conforme o colapso
       >
@@ -25,9 +23,5 @@ function LayoutContent({ children }: { children: React.ReactNode }) {
   );
 }
 export default function Layout({ children }: { children: React.ReactNode }) {
-  return (
-    <SidebarProvider>
-      <LayoutContent>{children}</LayoutContent>
-    </SidebarProvider>
-  );
+  return <LayoutContent>{children}</LayoutContent>;
 }

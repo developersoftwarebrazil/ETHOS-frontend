@@ -5,7 +5,7 @@
   gap: $space-020;
   overflow: hidden;
   padding: $space-016;
- 
+
   .links {
     @include font-token(font-2-l);
     a {
@@ -20,26 +20,24 @@
       line-height: 1;
       overflow: hidden;
     }
-    
+
     .lost::after {
       display: block;
-      content: '';
+      content: "";
       height: 2px;
       margin: $space-004 0;
       width: 98%;
       background: currentColor;
     }
-    
   }
 
-
-  .register_button{
+  .register_button {
     background: #e41226;
     width: fit-content;
     padding: $space-016 $space-024;
     color: $grl01;
     border: solid 4px transparent;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     text-transform: uppercase;
   }
 }
@@ -61,10 +59,14 @@
 }
 
 .subtitle::after {
-  content: '';
+  content: "";
   display: block;
   background: #ddd;
   height: 0.5rem;
   width: 3rem;
   border-radius: 0.2rem;
+}
+.success {
+  color: #4c1;
+  margin-top: 1rem;
 }

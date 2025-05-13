@@ -1,8 +1,10 @@
 import { Metadata } from "next";
 
+// Estilos
 import styles from "@/app/account/login/styles/login.module.scss";
 
-import LoginCreate from "@/app/account/login/components/create/login-create-form";
+// Componentes
+import LoginCreate from "@/app/account/login/create/component/login-create-form";
 import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
 
 export const metadata: Metadata = {
@@ -10,13 +12,10 @@ export const metadata: Metadata = {
   description: "Crie a sua conta do site ETHOS.",
 };
 
-export default async function LoginPage() {
+export default async function LoginCreatePage() {
   return (
     <section className={styles.login}>
-      {/* Fundo branco translúcido */}
-
       <div className={`${styles.content} container-login`}>
-        {/* Lado esquerdo: Login */}
         <div className={styles.left}>
           <div className={styles.mask}>
             <h1 className="title">Criar Conta</h1>
@@ -24,9 +23,9 @@ export default async function LoginPage() {
           </div>
           <div className={styles.overlay} />
         </div>
-        {/* Lado direito: Apresentação */}
+
         <BackgroundPresentationForm />
-        <div className={styles.overlay}></div> {/* Overlay vem por último! */}
+        <div className={styles.overlay}></div>
       </div>
     </section>
   );

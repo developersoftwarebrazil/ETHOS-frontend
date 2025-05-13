@@ -14,14 +14,11 @@ import Link from "next/link";
 
 function FormButton() {
   const { pending } = useFormStatus();
+
   return (
-    <>
-      {pending ? (
-        <Button disabled={pending}>Enviando...</Button>
-      ) : (
-        <Button disabled={pending}>Entrar</Button>
-      )}
-    </>
+    <Button disabled={pending} type="submit">
+      {pending ? "Enviando..." : "Entrar"}
+    </Button>
   );
 }
 
@@ -33,43 +30,45 @@ export default function LoginForm() {
   });
 
   React.useEffect(() => {
-    if (state.ok) window.location.href = "/account";
+    if (state.ok) {
+      window.location.href = "/account";
+    }
   }, [state.ok]);
 
   return (
-    <>
-      <form action={action} className={styles.form}>
-        <div className={styles.inputs}>
-          <Input
-            label="Usuário"
-            name="username"
-            placeholder="usuário"
-            type="text"
-          />
-          <Input
-            label="Senha"
-            name="password"
-            placeholder="senha"
-            type="password"
-          />
+    <form action={action} className={styles.form}>
+      <div className={styles.inputs}>
+        <Input
+          label="Usuário"
+          name="username"
+          placeholder="usuário"
+          type="text"
+        />
+        <Input
+          label="Senha"
+          name="password"
+          placeholder="senha"
+          type="password"
+        />
+        <ErrorMessage error={state.error} />
+      </div>
 
-          <ErrorMessage error={state.error} />
-        </div>
-        <FormButton />
-        <div className={styles.links}>
-          <Link href="/account/login/lost" className={styles.lost}>
-            Esqueceu ou perdeu a senha?
-          </Link>
+      <FormButton />
 
-          <div className={styles.register}>
-            <h2 className={styles.subtitle}>Cadastre-se</h2>
-            <p>Ainda não possui uma conta? Cadastre-se no site.</p>
-          </div>
-          <Link className={styles.register_button} href="/account/login/create">
-            Cadastre-se no site
-          </Link>
+      <div className={styles.links}>
+        <Link href="/account/login/lost" className={styles.lost}>
+          Esqueceu ou perdeu a senha?
+        </Link>
+
+        <div className={styles.register}>
+          <h2 className={styles.subtitle}>Cadastre-se</h2>
+          <p>Ainda não possui uma conta? Cadastre-se no site.</p>
         </div>
-      </form>
-    </>
+
+        <Link className={styles.register_button} href="/account/login/create">
+          Cadastre-se no site
+        </Link>
+      </div>
+    </form>
   );
 }

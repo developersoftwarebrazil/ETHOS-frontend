@@ -1,8 +1,7 @@
+// src/app/account/login/page.tsx
 import styles from "./styles/login.module.scss";
-
 import LoginForm from "@/app/account/login/components/login-form";
 import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
-
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -10,13 +9,10 @@ export const metadata: Metadata = {
   description: "Logue na sua conta do site ETHOS.",
 };
 
-export default async function LoginPage() {
+export default function LoginPage() {
   return (
     <section className={styles.login}>
-      {/* Fundo branco translúcido */}
-
       <div className={`${styles.content} container-login`}>
-        {/* Lado esquerdo: Login */}
         <div className={styles.left}>
           <div className={styles.mask}>
             <h1 className="title">Login</h1>
@@ -24,9 +20,8 @@ export default async function LoginPage() {
           </div>
           <div className={styles.overlay} />
         </div>
-        {/* Lado direito: Apresentação */}
+
         <BackgroundPresentationForm />
-        <div className={styles.overlay}></div> {/* Overlay vem por último! */}
       </div>
     </section>
   );

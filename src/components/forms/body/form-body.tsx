@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./form-body.module.scss";
+import styles from "../../styles/form-body.module.scss";
 
 interface FomrBodyProps {
   title: string;

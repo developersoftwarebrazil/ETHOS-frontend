@@ -1,4 +1,4 @@
-import styles from "./form-table.module.scss";
+import styles from "../../styles/form-table.module.scss";
 
 interface Column {
   key: string;

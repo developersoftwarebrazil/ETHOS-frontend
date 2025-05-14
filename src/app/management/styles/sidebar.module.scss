@@ -5,7 +5,7 @@
   position: relative;
   border-end-end-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  top: 3rem;
+  top: 6.6rem;
   left: 0;
   min-width: max-content;
   max-width: 360px;
@@ -25,7 +25,7 @@
   align-content: center;
   font: $font-2-s;
   color: #fb1;
-  padding: 1rem;
+  padding:1.5rem 1rem;
   background: $bl08;
 }
 
@@ -86,7 +86,7 @@
 
 .toggleButton {
   position: absolute;
-  top: 1rem;
+  top: 1.5rem;
   right: 0.3rem;
   background: $bl01;
   border: 1px solid #fb1;

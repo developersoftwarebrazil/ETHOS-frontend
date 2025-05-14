@@ -1,5 +1,5 @@
 import { Search } from "lucide-react";
-import styles from "./form-searchbar.module.scss";
+import styles from "../../styles/form-searchbar.module.scss";
 
 interface SearchBarProps {
   placeholder?: string;

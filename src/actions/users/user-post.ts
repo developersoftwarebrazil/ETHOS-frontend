@@ -25,6 +25,7 @@ export default async function userPost(
     }
 
     const { url } = USER_POST();
+    console.log("URL usada no fetch:", url);
 
     const response = await fetch(url, {
       method: "POST",
@@ -44,6 +45,7 @@ export default async function userPost(
 
     return { data: null, ok: true, error: "" };
   } catch (error: unknown) {
+    console.log(error);
     return apiError(error);
   }
 }

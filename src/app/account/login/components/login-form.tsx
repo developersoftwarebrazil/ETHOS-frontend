@@ -16,9 +16,13 @@ function FormButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button disabled={pending} type="submit">
-      {pending ? "Enviando..." : "Entrar"}
-    </Button>
+    <>
+      {pending ? (
+        <Button disabled={pending}>Enviando...</Button>
+      ) : (
+        <Button>Entrar</Button>
+      )}
+    </>
   );
 }
 
@@ -32,6 +36,7 @@ export default function LoginForm() {
   React.useEffect(() => {
     if (state.ok) {
       window.location.href = "/account";
+      console.log("carregado");
     }
   }, [state.ok]);
 

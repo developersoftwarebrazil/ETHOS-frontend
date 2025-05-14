@@ -31,7 +31,7 @@ export default async function login(
     }
 
     const data = await response.json();
-
+    console.log("retorna isso-->", data);
     // Salva o token nos cookies
     (await cookies()).set("token", data.token, {
       httpOnly: true,

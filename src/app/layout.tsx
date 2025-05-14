@@ -1,3 +1,4 @@
+// layout principal (com Sidebar, Header etc.)
 import type { Metadata } from "next";
 import "./globals.scss";
 import { chathura, openSans, roboto } from "@/functions/fonts";

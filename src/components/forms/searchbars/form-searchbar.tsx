@@ -1,5 +1,6 @@
 import { Search } from "lucide-react";
 import styles from "../../styles/form-searchbar.module.scss";
+import { useState } from "react";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -10,6 +11,10 @@ export default function SearchBar({
   placeholder = "Buscar...",
   onSearch,
 }: SearchBarProps) {
+  const [input, setInput] = useState("");
+  const handleSearch = () => {
+    onSearch(input.trim());
+  };
   return (
     <div className={styles.searchbar}>
       <Search className={styles.icon} />
@@ -17,9 +22,10 @@ export default function SearchBar({
         type="text"
         className={styles.input}
         placeholder={placeholder}
-        onChange={(e) => onSearch(e.target.value)}
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
       />
-      <div className={styles.button}>
+      <div className={styles.button} onClick={handleSearch}>
         <p>buscar</p>
       </div>
     </div>

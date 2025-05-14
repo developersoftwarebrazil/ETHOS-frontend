@@ -1,34 +1,39 @@
-'use client'
+"use client";
+import { fetchUsers } from "@/actions/users/fetch-user";
 import FormBody from "@/components/forms/body/form-body";
 import SearchBar from "@/components/forms/searchbars/form-searchbar";
 import FormTable from "@/components/forms/tables/form-table";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-export default  function AdminListUserPage(){
-  const[ search, setSearch]= useState('');
+export default function AdminListUserPage() {
+  // const[ search, setSearch]= useState('');
+  const [users, setUsers] = useState<{ nome: string; email: string }[]>([]);
+  const [filtered, setFiltered] = useState<typeof users>([]);
 
-   const data = [
-    { nome: "João", email: "joao@email.com", nomeCompleto: 'João Miguel Couto' },
-    { nome: "Maria", email: "maria@email.com", nomeCompleto: 'Maria Judith' },
-    { nome: "Maria", email: "maria@email.com", nomeCompleto:'Maria Joaquina' },
+  useEffect(() => {
+    async function load() {
+      const data = await fetchUsers();
+      setUsers(data);
+      setFiltered(data);
+    }
+    load();
+  }, []);
+
+  const handleSearch = (value: string) => {
+    const term = value.toLowerCase();
+    setFiltered(users.filter((user) => user.nome.toLowerCase().includes(term)));
+  };
+
+  const columns = [
+    { key: "nome", label: "Nome" },
+    { key: "email", label: "E-mail" },
   ];
 
-   const filtered = data.filter((d) =>
-    d.nome.toLowerCase().includes(search.toLowerCase())
-  );
   return (
     <FormBody title="Selecione um usuário para editar">
       <section>
-      <SearchBar onSearch={setSearch}/>
-      <FormTable
-      columns={[
-          { key: "nome", label: "Nome" },
-          { key: "email", label: "E-mail" },
-          { key: "nomeCompleto", label: "Nome completo" },
-        ]}
-        data={filtered}
-       />
-
+        <SearchBar onSearch={handleSearch} />
+        <FormTable columns={columns} data={filtered} />
       </section>
     </FormBody>
   );

@@ -3,13 +3,14 @@
 .searchbar {
   display: flex;
   align-items: center;
-  background-color: $bl08; // azul escuro
-  border-radius: 0.5rem;
-  padding: 0.75rem 1rem;
-  color: $grl02;
   width: 100%;
   margin-bottom: 2rem;
-  // max-width: 500px;
+  padding: 0.75rem 1rem;
+  gap: 1rem;
+  background-color: $bl08; // azul escuro
+  border-radius: 0.5rem;
+  color: $grl02;
+
 }
 
 .icon {
@@ -31,7 +32,7 @@
   font: $font-2-s;
   font-size: 1rem;
   width: 100%;
-  max-width: 70%;
+  max-width: 50%;
 
   &::placeholder {
     color: $bl05;

@@ -2,12 +2,10 @@
 
 .formBody {
   flex: 1;
-  // padding: 1rem;
   margin: 2rem;
   background: $grl01;
   border: 0.0025rem solid #fb1;
   border-radius: 0.5rem;
-  height: calc(100vh - 6rem); // considerando header e padding
   overflow-y: auto;
 }
 

@@ -2,10 +2,36 @@
 
 .wrapper {
   border: 0.024rem solid #fb1;
-  border-radius: 0.5rem;
   overflow-x: auto;
 }
-
+.actionbar {
+  display: flex;
+  
+  align-items: center;
+  gap: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  padding: 1rem  0 1rem 4rem;
+  background: $bl07;
+  color: $grl01
+}
+.actionInput {
+  @include font-token(font-1-s);
+  width: 20rem;
+  padding: 0.5rem 0.75rem;
+  border: 0.06rem solid #fb1;
+  border-radius: 0.5rem;
+  background: $grl01;
+  color: $bl10;
+}
+.actionButton {
+  color: $grl01;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: $bl10;
+  cursor: pointer;
+}
 .table {
   width: 100%;
   border-collapse: collapse;

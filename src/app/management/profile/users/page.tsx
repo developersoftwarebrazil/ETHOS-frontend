@@ -6,8 +6,7 @@ import FormTable from "@/components/forms/tables/form-table";
 import { useEffect, useState } from "react";
 
 export default function AdminListUserPage() {
-  // const[ search, setSearch]= useState('');
-  const [users, setUsers] = useState<{ nome: string; email: string }[]>([]);
+  const [users, setUsers] = useState<{ nome: string; nomeCompleto: string; email: string }[]>([]);
   const [filtered, setFiltered] = useState<typeof users>([]);
 
   useEffect(() => {
@@ -26,6 +25,7 @@ export default function AdminListUserPage() {
 
   const columns = [
     { key: "nome", label: "Nome" },
+    { key: "nomeCompleto", label: "Nome completo" },
     { key: "email", label: "E-mail" },
   ];
 

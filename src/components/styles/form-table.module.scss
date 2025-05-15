@@ -76,3 +76,36 @@
     padding: 0.8rem 1rem;
   }
 }
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: $bl09;
+}
+
+.selectedInfo {
+  @include font-token(font-1-m);
+  color: #fb1;
+}
+
+.pagination {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pageButton {
+  @include font-token(font-1-m);
+  padding: 0.3rem 0.6rem;
+  border: 0.025rem solid #fb1;
+  background: white;
+  cursor: pointer;
+  border-radius: 0.25rem;
+}
+
+.activePage {
+  background: #0070f3;
+  color: white;
+  font-weight: bold;
+  border-color: #0070f3;
+}

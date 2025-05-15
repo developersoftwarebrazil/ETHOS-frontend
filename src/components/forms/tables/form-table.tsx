@@ -12,15 +12,23 @@ interface FormTableProps {
   onAction?: (action: string, selected: number[]) => void;
 }
 
+const ITEMS_PER_PAGE = 5;
+
 export default function FormTable({ columns, data, onAction }: FormTableProps) {
   const [selectedRow, setSelectedRow] = useState<number[]>([]);
   const [action, setAction] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
 
-  const handleSeledteAll = (checked: boolean) => {
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const currentData = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+
+  const handleSelectAll = (checked: boolean) => {
+    const pageIndices = currentData.map((_, idx) => startIndex + idx);
     if (checked) {
-      setSelectedRow(data.map((_, idx) => idx));
+      setSelectedRow((prev) => Array.from(new Set([...prev, ...pageIndices])));
     } else {
-      setSelectedRow([]);
+      setSelectedRow((prev) => prev.filter((i) => !pageIndices.includes(i)));
     }
   };
 
@@ -36,13 +44,17 @@ export default function FormTable({ columns, data, onAction }: FormTableProps) {
     }
   };
 
+  const isPageFullySelected = currentData.every((_, idx) =>
+    selectedRow.includes(startIndex + idx)
+  );
+
   return (
     <div className={styles.wrapper}>
+      {/* AÇÃO */}
       <div className={styles.actionbar}>
         <label htmlFor="action-select">Ação</label>
         <input
           type="text"
-          name="action-select"
           id="action-select"
           value={action}
           onChange={(e) => setAction(e.target.value)}
@@ -53,14 +65,15 @@ export default function FormTable({ columns, data, onAction }: FormTableProps) {
         </button>
       </div>
 
+      {/* TABELA */}
       <table className={styles.table}>
         <thead>
           <tr>
             <th className={styles.checkboxCol}>
               <input
                 type="checkbox"
-                checked={selectedRow.length === data.length}
-                onChange={(e) => handleSeledteAll(e.target.checked)}
+                checked={isPageFullySelected}
+                onChange={(e) => handleSelectAll(e.target.checked)}
               />
             </th>
             {columns.map((col) => (
@@ -71,24 +84,49 @@ export default function FormTable({ columns, data, onAction }: FormTableProps) {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, i) => (
-            <tr key={i} className={styles.row}>
-              <td className={styles.checkbox}>
-                <input
-                  type="checkbox"
-                  checked={selectedRow.includes(1)}
-                  onChange={() => handleSelectedRow(i)}
-                />
-              </td>
-              {columns.map((col) => (
-                <td key={col.key} className={styles.cell}>
-                  {row[col.key]}
+          {currentData.map((row, i) => {
+            const actualIndex = startIndex + i;
+            return (
+              <tr key={actualIndex} className={styles.row}>
+                <td className={styles.checkbox}>
+                  <input
+                    type="checkbox"
+                    checked={selectedRow.includes(actualIndex)}
+                    onChange={() => handleSelectedRow(actualIndex)}
+                  />
                 </td>
-              ))}
-            </tr>
-          ))}
+                {columns.map((col) => (
+                  <td key={col.key} className={styles.cell}>
+                    {row[col.key]}
+                  </td>
+                ))}
+              </tr>
+            );
+          })}
         </tbody>
       </table>
+
+      {/* FOOTER COM PAGINAÇÃO */}
+      <div className={styles.footer}>
+        <div className={styles.selectedInfo}>
+          {selectedRow.length > 0
+            ? `${selectedRow.length} item(s) selecionado(s)`
+            : "Nenhum item selecionado"}
+        </div>
+        <div className={styles.pagination}>
+          {Array.from({ length: totalPages }, (_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentPage(idx + 1)}
+              className={`${styles.pageButton} ${
+                currentPage === idx + 1 ? styles.activePage : ""
+              }`}
+            >
+              {idx + 1}
+            </button>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

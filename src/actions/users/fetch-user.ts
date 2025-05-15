@@ -25,6 +25,17 @@ export async function fetchUsers(): Promise<
         fullname: "Maria Manuela",
         email: "mariamanuela@email.com",
       },
+       { name: "João", fullname: "Joao Fernando", email: "joao@email.com" },
+      {
+        name: "Maria",
+        fullname: "Maria Fernanda",
+        email: "mariafernanda@email.com",
+      },
+      {
+        name: "Maria",
+        fullname: "Maria Manuela",
+        email: "mariamanuela@email.com",
+      },
     ];
   } catch (error) {
     console.error(error);

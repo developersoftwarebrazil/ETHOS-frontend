@@ -1,24 +1,50 @@
 @import "../../styles/variables/index.scss";
 
+.wrapper {
+  border: 0.024rem solid #fb1;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
 .table {
   width: 100%;
   border-collapse: collapse;
   background-color: $grl02;
 
-  th, td {
+  th,
+  td {
+    @include font-token(font-2-s);
     padding: 0.75rem;
-    border: 1px solid $bl08;
+    border-bottom: 1px solid #fb1;
     text-align: left;
-    font: $font-2-s;
     color: $bl11;
+  }
+  .headerCell {
+    @include font-token(font-1-l);
+    background-color: $bl06;
+    padding: 1rem;
+    color: $grl02;
+  }
+  .checkboxCol {
+    width: 3rem;
+    text-align: center;
+    background-color: $bl06;
   }
 
   thead {
     background-color: $bl08;
     color: #fb1;
   }
+  tbody .row {
+    background: $grl02;
+    transition: background 0.2s ease-in-out;
+  }
 
   tbody tr:hover {
-    background-color: $gr02;
+    background-color: $grl01;
+  }
+  .cell {
+    @include font-token(font-2-s);
+    padding: 0.8rem 1rem;
   }
 }

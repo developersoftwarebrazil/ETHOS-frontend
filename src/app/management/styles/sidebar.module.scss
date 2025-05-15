@@ -25,7 +25,7 @@
   align-content: center;
   font: $font-2-s;
   color: #fb1;
-  padding:1.5rem 1rem;
+  padding: 1.5rem 1rem;
   background: $bl08;
 }
 
@@ -114,4 +114,17 @@
   align-items: center;
   cursor: pointer;
   z-index: 10;
+}
+.sidebarFooter {
+  @include font-token(font-2-m);
+  padding: 1.5rem;
+  border-top: 0.025rem solid rgba(255, 255, 255, 0.1);
+  border-bottom-right-radius: 0.5rem;
+  text-align: center;
+  color: $grl02;
+  background: $bl09;
+}
+
+.footerText {
+  opacity: 0.6;
 }

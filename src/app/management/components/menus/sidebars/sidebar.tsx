@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -6,7 +5,6 @@ import { Plus, Pencil, ChevronRight, ChevronLeft } from "lucide-react";
 
 import styles from "../../../styles/sidebar.module.scss";
 import { useSidebar } from "@/contexts/sidebar/sidebarContext";
-
 
 const menuSections = [
   {
@@ -80,6 +78,10 @@ export default function Sidebar() {
                 </ul>
               </div>
             ))}
+            {/* Footer */}
+            <div className={styles.sidebarFooter}>
+              <span className={styles.footerText}>v1.0.0</span>
+            </div>
           </>
         )}
       </aside>

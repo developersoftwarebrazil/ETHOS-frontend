@@ -4,7 +4,7 @@
   flex: 1;
   margin: 2rem;
   background: $grl01;
-  border: 0.0025rem solid #fb1;
+  // border: 0.0025rem solid #fb1;
   border-radius: 0.5rem;
   overflow-y: auto;
 }
@@ -13,7 +13,6 @@
   @include font-token(font-1-xl);
   font-weight: 700;
   padding: 0 0.4rem;
-  margin: 2rem;
   color: $bl09;
   margin-bottom: 2rem;
 }

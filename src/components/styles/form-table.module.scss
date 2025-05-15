@@ -6,14 +6,15 @@
 }
 .actionbar {
   display: flex;
-  
+  @include font-token(font-1-m);
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  padding: 1rem  0 1rem 4rem;
+  padding: 1rem 0 1rem 4rem;
   background: $bl07;
-  color: $grl01
+
+  color: $grl01;
 }
 .actionInput {
   @include font-token(font-1-s);
@@ -50,6 +51,7 @@
     background-color: $bl06;
     padding: 1rem;
     color: $grl02;
+    color: #fb1;
   }
   .checkboxCol {
     width: 3rem;

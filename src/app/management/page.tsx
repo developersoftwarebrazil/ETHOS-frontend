@@ -8,12 +8,12 @@ export default function HomeAdminPage() {
   const [search, setSearch] = useState("");
 
   const data = [
-    { nome: "João", email: "joao@email.com" },
-    { nome: "Maria", email: "maria@email.com" },
+    { name: "João", email: "joao@email.com" },
+    { name: "Maria", email: "maria@email.com" },
   ];
 
   const filtered = data.filter((d) =>
-    d.nome.toLowerCase().includes(search.toLowerCase())
+    d.name.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -21,7 +21,7 @@ export default function HomeAdminPage() {
       <SearchBar onSearch={setSearch} />
       <FormTable
         columns={[
-          { key: "nome", label: "Nome" },
+          { key: "name", label: "Nome" },
           { key: "email", label: "E-mail" },
         ]}
         data={filtered}

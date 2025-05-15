@@ -1,7 +1,7 @@
 import { USER_GET } from "@/functions/api";
 
 export async function fetchUsers(): Promise<
-  Array<{ nome: string; nomeCompleto: string; email: string }>
+  Array<{ name: string; fullname: string; email: string }>
 > {
   try {
     const { url } = USER_GET();
@@ -14,15 +14,15 @@ export async function fetchUsers(): Promise<
     // Simulação de estrutura, ajuste conforme retorno real da APInpm run dev
 
     return [
-      { nome: "João", nomeCompleto: "Joao Fernando", email: "joao@email.com" },
+      { name: "João", fullname: "Joao Fernando", email: "joao@email.com" },
       {
-        nome: "Maria",
-        nomeCompleto: "Maria Fernanda",
+        name: "Maria",
+        fullname: "Maria Fernanda",
         email: "mariafernanda@email.com",
       },
       {
-        nome: "Maria",
-        nomeCompleto: "Maria Manuela",
+        name: "Maria",
+        fullname: "Maria Manuela",
         email: "mariamanuela@email.com",
       },
     ];

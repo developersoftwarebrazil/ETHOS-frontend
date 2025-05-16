@@ -1,4 +1,4 @@
-import "../../styles/input.module.scss";
+import styles from "../../styles/input.module.scss";
 
 // components/shared/InputField.tsx
 import React from "react";
@@ -26,7 +26,7 @@ const InputField: React.FC<InputFieldProps> = ({
 }) => {
   return (
     <div>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className={styles.label}>{label}</label>
       <input
         id={id}
         name={name}

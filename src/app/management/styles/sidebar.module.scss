@@ -9,10 +9,9 @@
   left: 0;
   min-width: max-content;
   max-width: 360px;
+  height: fit-content;
   background-color: $grl01;
   color: $grl02;
-
-  overflow-y: auto;
 }
 
 .section {

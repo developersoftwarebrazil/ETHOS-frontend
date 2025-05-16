@@ -1,0 +1,26 @@
+@import "../../styles/variables/index.scss" ;
+.form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  gap: 2rem;
+  padding: 3rem;
+  border: .025rem solid #fb1;
+  background: $grl02;
+}
+
+.button {
+  @include font-token(font-2-m);
+  align-self: flex-start;
+  background-color: $bl08;
+  color: $grl01;
+  padding: .8rem 1.5rem;
+  border: none;
+  border-radius: .5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $bl06;
+  }
+}

@@ -1,6 +1,8 @@
 "use client";
-
 import React from "react";
+
+import styles from "../../styles/form-create.module.scss";
+
 import FormBody from "../body/form-body";
 import InputField from "../inputs/InputFields";
 import Input from "../inputs/input";
@@ -34,7 +36,7 @@ export default function FormCreate({
 }: FormCreateProps) {
   return (
     <FormBody title={title}>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={styles.form}>
         {fields.map((field) => {
           const commomProps = {
             key: field.name,
@@ -46,9 +48,13 @@ export default function FormCreate({
             onChange,
             required: field.required,
           };
-          return field.component === 'inputField'?(<InputField id={field.name} {...commomProps}/>):(<Input error={errors[field.name]} {...commomProps}/>)
+          return field.component === "inputField" ? (
+            <InputField id={field.name} {...commomProps} />
+          ) : (
+            <Input error={errors[field.name]} {...commomProps} />
+          );
         })}
-        <button type="submit">{submitLabel}</button>
+        <button type="submit" className={styles.button}>{submitLabel}</button>
       </form>
     </FormBody>
   );

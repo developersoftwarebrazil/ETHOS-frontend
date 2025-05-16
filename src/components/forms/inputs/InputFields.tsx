@@ -1,4 +1,4 @@
-import "./InputFields.modules.scss";
+import "../../styles/input.module.scss";
 
 // components/shared/InputField.tsx
 import React from "react";
@@ -9,9 +9,9 @@ interface InputFieldProps {
   label: string;
   placeholder: string;
   type: string;
-  // value: string;
-  // onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  // required?: boolean;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  required?: boolean;
 }
 
 const InputField: React.FC<InputFieldProps> = ({
@@ -20,9 +20,9 @@ const InputField: React.FC<InputFieldProps> = ({
   label,
   placeholder,
   type,
-  // value,
-  // onChange,
-  // required = false,
+  value,
+  onChange,
+  required = false,
 }) => {
   return (
     <div>
@@ -32,9 +32,9 @@ const InputField: React.FC<InputFieldProps> = ({
         name={name}
         type={type}
         placeholder={placeholder}
-        // value={value}
-        // onChange={onChange}
-        // required={required}
+        value={value}
+        onChange={onChange}
+        required={required}
       />
     </div>
   );

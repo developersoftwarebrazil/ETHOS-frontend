@@ -1,10 +1,10 @@
-export default async function AdminRolesUserPage() {
+import FormBody from "@/components/forms/body/form-body";
+import BackgroundPresentationForm from "@/components/presentations/background-presentation-form";
+
+export default async function HomeRolesUserPage() {
   return (
-    <section className="flex flex-col gap-4">
-      <h1 className="text-2xl font-bold">Autorizações e Autenticações</h1>
-      <p className="text-gray-500">
-        Manage user roles and permissions within the application.
-      </p>
-    </section>
+    <FormBody title="Home do gerenciamento de Permissões do usuário">
+      <BackgroundPresentationForm/>
+    </FormBody>
   );
 }

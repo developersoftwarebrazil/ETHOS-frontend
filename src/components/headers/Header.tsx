@@ -16,7 +16,7 @@ export default async function Header() {
             <span className={styles.spanWelcome}>
               Bem vindo{" "}
               <span className={styles.spanName}>
-                <Link href={"/management/roles/users"}>{data.username}</Link>
+                <Link href={"/account/profile"}>{data.username}</Link>
               </span>{" "}
             </span>
             <ul className={styles.menu}>

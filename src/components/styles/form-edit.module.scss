@@ -1,0 +1,51 @@
+@import '../../styles/variables/index.scss';
+
+.formWrapper {
+  display: flex;
+  background-color: $grl02;
+  padding: 1.5rem 0;
+  border-radius: 0.75rem;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  display: flex;
+  @include font-token(font-1-m);
+  background-color: $bl08;
+  color: #fb1;
+  text-align: center;
+  justify-content: center;
+  padding: 0.9rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 70%;
+  margin: auto;
+}
+
+.buttonSubmit {
+  background-color: #001f5c;
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  width: max-content;
+  margin: auto;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #003b99;
+  }
+}
+
+.subtitle {
+  @include font-token(font-2-l);
+  margin: 1rem 0 1rem .5rem;
+  color: $bl07;
+}

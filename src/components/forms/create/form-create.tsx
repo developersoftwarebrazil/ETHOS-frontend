@@ -6,15 +6,9 @@ import styles from "../../styles/form-create.module.scss";
 import FormBody from "../body/form-body";
 import InputField from "../inputs/InputFields";
 import Input from "../inputs/input";
+import { FormField } from "@/types/form-fields";
 
-export interface FormField {
-  name: string;
-  label: string;
-  placeholder?: string;
-  type?: string;
-  component?: "input" | "inputField";
-  required?: boolean;
-}
+
 interface FormCreateProps {
   title: string;
   fields: FormField[];
@@ -54,7 +48,9 @@ export default function FormCreate({
             <Input error={errors[field.name]} {...commomProps} />
           );
         })}
-        <button type="submit" className={styles.button}>{submitLabel}</button>
+        <button type="submit" className={styles.button}>
+          {submitLabel}
+        </button>
       </form>
     </FormBody>
   );

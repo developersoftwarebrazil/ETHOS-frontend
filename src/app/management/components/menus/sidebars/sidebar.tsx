@@ -10,7 +10,7 @@ const menuSections = [
   {
     title: "Autenticação e Autorização",
     items: [
-      { label: "Usuários", path: "/management/profile/users" },
+      { label: "Usuários", path: "/management/users" },
       { label: "Permissões", path: "/management/roles/role" },
     ],
   },

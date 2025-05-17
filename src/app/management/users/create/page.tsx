@@ -1,5 +1,6 @@
 "use client";
-import FormCreate, { FormField } from "@/components/forms/create/form-create";
+import FormCreate from "@/components/forms/create/form-create";
+import { FormField } from "@/types/form-fields";
 import React, { useState } from "react";
 
 export default function CreateUserPage() {
@@ -25,7 +26,7 @@ export default function CreateUserPage() {
   };
 
   const fields: FormField[]  = [
-    { name: "username", label: "Usuário", required: true, component: "input" },
+    { name: "username", label: "Usuário",type:'text', required: true, component: "input" },
     { name: "password", label: "Senha", type: "password", required: true, component: "input",
     },
     {name: "confirmPassword",label: "Confirmar senha",type: "password",required: true,component: "input",

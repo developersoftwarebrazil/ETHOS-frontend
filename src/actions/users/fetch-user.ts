@@ -1,7 +1,14 @@
-import { USER_GET } from "@/functions/api";
+import { USER_GET } from "@/functions/apis/options";
 
 export async function fetchUsers(): Promise<
-  Array<{ name: string; fullname: string; email: string }>
+  Array<{
+    id: number;
+    name: string;
+    email: string;
+    phone: string;
+    image: string;
+    createdAt: string;
+  }>
 > {
   try {
     const { url } = USER_GET();
@@ -9,34 +16,9 @@ export async function fetchUsers(): Promise<
     if (!response) throw new Error("Erro ao buscar usuários");
 
     const data = await response.json();
-    console.log(data);
+    console.log(response, data);
 
-    // Simulação de estrutura, ajuste conforme retorno real da APInpm run dev
-
-    return [
-      { name: "João", fullname: "Joao Fernando", email: "joao@email.com" },
-      {
-        name: "Maria",
-        fullname: "Maria Fernanda",
-        email: "mariafernanda@email.com",
-      },
-      {
-        name: "Maria",
-        fullname: "Maria Manuela",
-        email: "mariamanuela@email.com",
-      },
-       { name: "João", fullname: "Joao Fernando", email: "joao@email.com" },
-      {
-        name: "Maria",
-        fullname: "Maria Fernanda",
-        email: "mariafernanda@email.com",
-      },
-      {
-        name: "Maria",
-        fullname: "Maria Manuela",
-        email: "mariamanuela@email.com",
-      },
-    ];
+    return data;
   } catch (error) {
     console.error(error);
     return [];

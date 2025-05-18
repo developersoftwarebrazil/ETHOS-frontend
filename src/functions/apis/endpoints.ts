@@ -1,1 +1,1 @@
-export const API_URL = "https://dogsapi.origamid.dev/json";
+export const API_URL = "https://vercel-nest-user-app.vercel.app";

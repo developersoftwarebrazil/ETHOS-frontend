@@ -1,7 +1,8 @@
-/* eslint-disable-next-line @typescript-eslint/ban-ts-comment -- necessário para uso temporário enquanto ajustamos tipos */
-// @ts-nocheck
+// /* eslint-disable-next-line @typescript-eslint/ban-ts-comment -- necessário para uso temporário enquanto ajustamos tipos */
+// // @ts-nocheck
 
 export const API_URL = 'https://dogsapi.origamid.dev/json';
+
 
 export function TOKEN_POST() {
   return {
@@ -9,7 +10,7 @@ export function TOKEN_POST() {
   };
 }
 
-export function TOKEN_VALIDATE_POST(token) {
+export function TOKEN_VALIDATE_POST(token: string) {
   return {
     url: API_URL + '/jwt-auth/v1/token/validate',
     options: {
@@ -23,7 +24,7 @@ export function TOKEN_VALIDATE_POST(token) {
 
 export function USER_GET() {
   return {
-    url: API_URL + '/api/user',
+    url: API_URL + '/user/all',
   };
 }
 
@@ -33,7 +34,7 @@ export function USER_POST() {
   };
 }
 
-export function PHOTO_POST(formData, token) {
+export function PHOTO_POST(formData: FormData, token: string) {
   return {
     url: API_URL + '/api/photo',
     options: {
@@ -46,17 +47,17 @@ export function PHOTO_POST(formData, token) {
   };
 }
 
-export function PHOTOS_GET({ page, total, user }) {
-  return {
-    url: `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
-    options: {
-      method: 'GET',
-      cache: 'no-store',
-    },
-  };
-}
+// export function PHOTOS_GET({ page , total, user }) {
+//   return {
+//     url: `${API_URL}/api/photo/?_page=${page}&_total=${total}&_user=${user}`,
+//     options: {
+//       method: 'GET',
+//       cache: 'no-store',
+//     },
+//   };
+// }
 
-export function PHOTO_GET(id) {
+export function PHOTO_GET(id: number) {
   return {
     url: `${API_URL}/api/photo/${id}`,
     options: {
@@ -66,7 +67,7 @@ export function PHOTO_GET(id) {
   };
 }
 
-export function COMMENT_POST(id, body) {
+export function COMMENT_POST(id: number, body: string) {
   return {
     url: `${API_URL}/api/comment/${id}`,
     options: {
@@ -80,7 +81,7 @@ export function COMMENT_POST(id, body) {
   };
 }
 
-export function PHOTO_DELETE(id) {
+export function PHOTO_DELETE(id: number) {
   return {
     url: `${API_URL}/api/photo/${id}`,
     options: {

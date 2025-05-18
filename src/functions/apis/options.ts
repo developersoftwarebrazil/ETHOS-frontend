@@ -17,7 +17,7 @@ export const TOKEN_VALIDATE_POST = (token: string) => ({
 
 // USER
 export const USER_GET = () => ({
-  url: `${API_URL}/api/user`,
+  url: `${API_URL}/user/all`,
 });
 
 export const USER_POST = () => ({
